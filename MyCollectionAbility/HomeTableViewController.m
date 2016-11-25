@@ -21,7 +21,9 @@
 #import "HomeTableViewController.h"
 #import "HomeTableView.h"
 #import "HomeTabelViewDelegateObj.h"
-
+#import "NSKeyedArichiverViewController.h"
+#import "AboutNSUserDefualtViewController.h"
+#import "FileManagerViewController.h"
 @interface HomeTableViewController ()
 
 @property (nonatomic, strong) HomeTabelViewDelegateObj *tableViewDelegateObj;
@@ -56,10 +58,20 @@
     switch (indexPath.row) {
         case 0:
         {
-            
+            [self.navigationController pushViewController:[AboutNSUserDefualtViewController new] animated:YES];
         }
             break;
-            
+        
+        case 1:
+        {
+            [self.navigationController pushViewController:[NSKeyedArichiverViewController new] animated:YES];
+        }
+            break;
+        case 2:
+        {
+            [self.navigationController pushViewController:[FileManagerViewController new] animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -69,7 +81,9 @@
 #pragma amrk - lazy method
 
 - (NSArray *)titleArr{
-    return @[@"01--NSUserDefaults 保存对象"];
+    return @[@"01--NSUserDefaults 保存对象",
+             @"02--归档",
+             @"03--文件管理"];
 }
 - (HomeTabelViewDelegateObj *)tableViewDelegateObj{
     if (!_tableViewDelegateObj) {
