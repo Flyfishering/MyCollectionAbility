@@ -146,6 +146,7 @@
 		0407AC861DE53C7700412ECA /* MyCollectionAbility */ = {
 			isa = PBXGroup;
 			children = (
+				0458A2D91DED21AA009F5D10 /* Modes */,
 				046A89641DE7C95B00EC4F1D /* FileManager */,
 				046A89541DE72F7300EC4F1D /* NSKeyedArichiver */,
 				045ED6451DE57EB20024151C /* Tool */,
@@ -202,6 +203,14 @@
 				0435CA131DE5747E00A9F1CF /* AboutNSUserDefualtViewController.m */,
 			);
 			path = NSUserDefualt;
+			sourceTree = "<group>";
+		};
+		0458A2D91DED21AA009F5D10 /* Modes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modes;
+			path = EnumerateObjects/Modes;
 			sourceTree = "<group>";
 		};
 		045ED6451DE57EB20024151C /* Tool */ = {
