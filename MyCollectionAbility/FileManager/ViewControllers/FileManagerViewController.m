@@ -18,6 +18,8 @@
     [super viewDidLoad];
 
     [FileManagerObject getSandboxPaths];
+    [[FileManagerObject new] pathWithStringMethods];
+    [[FileManagerObject new] aboutNSData];
 }
 
 - (void)didReceiveMemoryWarning {

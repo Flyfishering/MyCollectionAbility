@@ -15,4 +15,7 @@
  获取沙盒目录
  */
 + (void)getSandboxPaths;
+#pragma mark - 二、NSString类路径的处理方法
+- (void)pathWithStringMethods;
+- (void)aboutNSData;
 @end
