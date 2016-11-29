@@ -24,10 +24,12 @@
 #import "NSKeyedArichiverViewController.h"
 #import "AboutNSUserDefualtViewController.h"
 #import "FileManagerViewController.h"
+#import "EnumerateObjectsViewController.h"
 @interface HomeTableViewController ()
 
 @property (nonatomic, strong) HomeTabelViewDelegateObj *tableViewDelegateObj;
 @property (nonatomic, strong) NSArray *titleArr;
+@property (nonatomic, strong) NSArray *viewControllers;
 
 @end
 
@@ -55,35 +57,25 @@
 - (void)taleviewObjSelectAtIndexPath:(NSIndexPath *)indexPath{
     
     NSLog(@"%s",__func__);
-    switch (indexPath.row) {
-        case 0:
-        {
-            [self.navigationController pushViewController:[AboutNSUserDefualtViewController new] animated:YES];
-        }
-            break;
-        
-        case 1:
-        {
-            [self.navigationController pushViewController:[NSKeyedArichiverViewController new] animated:YES];
-        }
-            break;
-        case 2:
-        {
-            [self.navigationController pushViewController:[FileManagerViewController new] animated:YES];
-        }
-            break;
-        default:
-            break;
-    }
+    UIViewController *viewController = [NSClassFromString(self.viewControllers[indexPath.row]) new] ;
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 
 #pragma amrk - lazy method
 
+- (NSArray *)viewControllers{
+    return @[@"AboutNSUserDefualtViewController",
+             @"NSKeyedArichiverViewController",
+             @"FileManagerViewController",
+             @"EnumerateObjectsViewController"];
+}
 - (NSArray *)titleArr{
     return @[@"01--NSUserDefaults 保存对象",
              @"02--归档",
-             @"03--文件管理"];
+             @"03--文件管理",
+             @"04--遍历数组字典的几种方法"];
 }
 - (HomeTabelViewDelegateObj *)tableViewDelegateObj{
     if (!_tableViewDelegateObj) {

@@ -19,6 +19,9 @@
 		0435CA0B1DE546D300A9F1CF /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435CA0A1DE546D300A9F1CF /* HomeTableViewController.m */; };
 		0435CA111DE5745600A9F1CF /* AboutNSUserDefualtModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435CA101DE5745600A9F1CF /* AboutNSUserDefualtModel.m */; };
 		0435CA141DE5747E00A9F1CF /* AboutNSUserDefualtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435CA131DE5747E00A9F1CF /* AboutNSUserDefualtViewController.m */; };
+		0458A2E11DED226A009F5D10 /* EnumerateObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458A2DF1DED226A009F5D10 /* EnumerateObjectsViewController.m */; };
+		0458A2E21DED226A009F5D10 /* EnumerateObjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0458A2E01DED226A009F5D10 /* EnumerateObjectsViewController.xib */; };
+		0458A2E51DED25AB009F5D10 /* EnumerateObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458A2E41DED25AB009F5D10 /* EnumerateObjects.m */; };
 		046A895E1DE7302600EC4F1D /* NSKeyedArichiverModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A895D1DE7302600EC4F1D /* NSKeyedArichiverModel1.m */; };
 		046A89621DE7308200EC4F1D /* NSKeyedArichiverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046A89601DE7308200EC4F1D /* NSKeyedArichiverViewController.m */; };
 		046A89631DE7308200EC4F1D /* NSKeyedArichiverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A89611DE7308200EC4F1D /* NSKeyedArichiverViewController.xib */; };
@@ -73,6 +76,11 @@
 		0435CA101DE5745600A9F1CF /* AboutNSUserDefualtModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutNSUserDefualtModel.m; sourceTree = "<group>"; };
 		0435CA121DE5747E00A9F1CF /* AboutNSUserDefualtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutNSUserDefualtViewController.h; sourceTree = "<group>"; };
 		0435CA131DE5747E00A9F1CF /* AboutNSUserDefualtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutNSUserDefualtViewController.m; sourceTree = "<group>"; };
+		0458A2DE1DED226A009F5D10 /* EnumerateObjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumerateObjectsViewController.h; sourceTree = "<group>"; };
+		0458A2DF1DED226A009F5D10 /* EnumerateObjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumerateObjectsViewController.m; sourceTree = "<group>"; };
+		0458A2E01DED226A009F5D10 /* EnumerateObjectsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnumerateObjectsViewController.xib; sourceTree = "<group>"; };
+		0458A2E31DED25AB009F5D10 /* EnumerateObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumerateObjects.h; sourceTree = "<group>"; };
+		0458A2E41DED25AB009F5D10 /* EnumerateObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumerateObjects.m; sourceTree = "<group>"; };
 		046A895C1DE7302600EC4F1D /* NSKeyedArichiverModel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKeyedArichiverModel1.h; sourceTree = "<group>"; };
 		046A895D1DE7302600EC4F1D /* NSKeyedArichiverModel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSKeyedArichiverModel1.m; sourceTree = "<group>"; };
 		046A895F1DE7308200EC4F1D /* NSKeyedArichiverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKeyedArichiverViewController.h; sourceTree = "<group>"; };
@@ -146,6 +154,7 @@
 		0407AC861DE53C7700412ECA /* MyCollectionAbility */ = {
 			isa = PBXGroup;
 			children = (
+				0458A2DA1DED224D009F5D10 /* EnumerateObjects */,
 				0458A2D91DED21AA009F5D10 /* Modes */,
 				046A89641DE7C95B00EC4F1D /* FileManager */,
 				046A89541DE72F7300EC4F1D /* NSKeyedArichiver */,
@@ -211,6 +220,42 @@
 			);
 			name = Modes;
 			path = EnumerateObjects/Modes;
+			sourceTree = "<group>";
+		};
+		0458A2DA1DED224D009F5D10 /* EnumerateObjects */ = {
+			isa = PBXGroup;
+			children = (
+				0458A2DB1DED224D009F5D10 /* Modes */,
+				0458A2DC1DED224D009F5D10 /* ViewControllers */,
+				0458A2DD1DED224D009F5D10 /* Views */,
+			);
+			path = EnumerateObjects;
+			sourceTree = "<group>";
+		};
+		0458A2DB1DED224D009F5D10 /* Modes */ = {
+			isa = PBXGroup;
+			children = (
+				0458A2E31DED25AB009F5D10 /* EnumerateObjects.h */,
+				0458A2E41DED25AB009F5D10 /* EnumerateObjects.m */,
+			);
+			path = Modes;
+			sourceTree = "<group>";
+		};
+		0458A2DC1DED224D009F5D10 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0458A2DE1DED226A009F5D10 /* EnumerateObjectsViewController.h */,
+				0458A2DF1DED226A009F5D10 /* EnumerateObjectsViewController.m */,
+				0458A2E01DED226A009F5D10 /* EnumerateObjectsViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0458A2DD1DED224D009F5D10 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		045ED6451DE57EB20024151C /* Tool */ = {
@@ -440,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0458A2E21DED226A009F5D10 /* EnumerateObjectsViewController.xib in Resources */,
 				0407AC971DE53C7700412ECA /* LaunchScreen.storyboard in Resources */,
 				0407AC941DE53C7700412ECA /* Assets.xcassets in Resources */,
 				046A89631DE7308200EC4F1D /* NSKeyedArichiverViewController.xib in Resources */,
@@ -596,6 +642,8 @@
 				0435CA141DE5747E00A9F1CF /* AboutNSUserDefualtViewController.m in Sources */,
 				046A896B1DE7C97200EC4F1D /* FileManagerViewController.m in Sources */,
 				0407AC8C1DE53C7700412ECA /* AppDelegate.m in Sources */,
+				0458A2E11DED226A009F5D10 /* EnumerateObjectsViewController.m in Sources */,
+				0458A2E51DED25AB009F5D10 /* EnumerateObjects.m in Sources */,
 				046A896F1DE7C99000EC4F1D /* FileManagerObject.m in Sources */,
 				0435CA021DE540E200A9F1CF /* HomeTabelViewDelegateObj.m in Sources */,
 				0407AC891DE53C7700412ECA /* main.m in Sources */,
