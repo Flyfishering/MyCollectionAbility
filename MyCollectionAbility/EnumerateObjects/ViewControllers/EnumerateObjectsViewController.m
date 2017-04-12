@@ -18,7 +18,24 @@
     [super viewDidLoad];
 
     [[EnumerateObjects new] enumerateObjects];
+    
+    [self p_configUI];
 }
+
+- (void)p_configUI{
+    
+    UIButton *button = [[UIButton alloc] init];
+    button.frame = CGRectMake(0, 0, 100, 100);
+    button.backgroundColor = [UIColor orangeColor];
+    [button setTitle:@"发现" forState:UIControlStateNormal];
+    
+    [self.view addSubview:button];
+    button.center = self.view.center;
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

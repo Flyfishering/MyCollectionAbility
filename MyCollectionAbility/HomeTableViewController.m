@@ -25,6 +25,7 @@
 #import "AboutNSUserDefualtViewController.h"
 #import "FileManagerViewController.h"
 #import "EnumerateObjectsViewController.h"
+#import "ConformsToProtocolViewController.h"
 @interface HomeTableViewController ()
 
 @property (nonatomic, strong) HomeTabelViewDelegateObj *tableViewDelegateObj;
@@ -69,13 +70,26 @@
     return @[@"AboutNSUserDefualtViewController",
              @"NSKeyedArichiverViewController",
              @"FileManagerViewController",
-             @"EnumerateObjectsViewController"];
+             @"EnumerateObjectsViewController",
+             @"DelegateInheritanceVC",
+             @"KVOViewController",
+             @"NotificationViewController",
+             @"NSCharacterSetViewController",
+             @"ConformsToProtocolViewController",
+             @"SingelAndBlockViewController"];
 }
+//#import "NotificationViewController.h"
 - (NSArray *)titleArr{
     return @[@"01--NSUserDefaults 保存对象",
              @"02--归档",
              @"03--文件管理",
-             @"04--遍历数组字典的几种方法"];
+             @"04--遍历数组字典的几种方法",
+             @"05--代理的继承",
+             @"06--KVO",
+             @"07--通知中心",
+             @"08--NSChracterSet",
+             @"09--ConformsToProtocolViewController",
+             @"10--单类中使用block"];
 }
 - (HomeTabelViewDelegateObj *)tableViewDelegateObj{
     if (!_tableViewDelegateObj) {
