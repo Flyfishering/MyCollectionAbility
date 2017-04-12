@@ -28,6 +28,12 @@
 		0435CA0B1DE546D300A9F1CF /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435CA0A1DE546D300A9F1CF /* HomeTableViewController.m */; };
 		0435CA111DE5745600A9F1CF /* AboutNSUserDefualtModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435CA101DE5745600A9F1CF /* AboutNSUserDefualtModel.m */; };
 		0435CA141DE5747E00A9F1CF /* AboutNSUserDefualtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435CA131DE5747E00A9F1CF /* AboutNSUserDefualtViewController.m */; };
+		044879501E9DD559009A678F /* MJExtensionLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448794F1E9DD559009A678F /* MJExtensionLearnViewController.m */; };
+		0448795A1E9DFBA7009A678F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 044879591E9DFBA7009A678F /* User.m */; };
+		0448795D1E9E0BF0009A678F /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448795C1E9E0BF0009A678F /* Status.m */; };
+		044879631E9E11BB009A678F /* StatusResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 044879621E9E11BB009A678F /* StatusResult.m */; };
+		044879661E9E1D30009A678F /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 044879651E9E1D30009A678F /* Student.m */; };
+		044879691E9E2181009A678F /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 044879681E9E2181009A678F /* Book.m */; };
 		045780DE1E02311A00783CAB /* KVO_TargetWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 045780DD1E02311A00783CAB /* KVO_TargetWrapper.m */; };
 		045780E11E0284A600783CAB /* KVO_Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 045780E01E0284A600783CAB /* KVO_Foo.m */; };
 		045780E41E03897400783CAB /* APLProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 045780E31E03897400783CAB /* APLProduct.m */; };
@@ -117,6 +123,18 @@
 		0435CA101DE5745600A9F1CF /* AboutNSUserDefualtModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutNSUserDefualtModel.m; sourceTree = "<group>"; };
 		0435CA121DE5747E00A9F1CF /* AboutNSUserDefualtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutNSUserDefualtViewController.h; sourceTree = "<group>"; };
 		0435CA131DE5747E00A9F1CF /* AboutNSUserDefualtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutNSUserDefualtViewController.m; sourceTree = "<group>"; };
+		0448794E1E9DD559009A678F /* MJExtensionLearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionLearnViewController.h; sourceTree = "<group>"; };
+		0448794F1E9DD559009A678F /* MJExtensionLearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionLearnViewController.m; sourceTree = "<group>"; };
+		044879581E9DFBA7009A678F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		044879591E9DFBA7009A678F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0448795B1E9E0BF0009A678F /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		0448795C1E9E0BF0009A678F /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		044879611E9E11BB009A678F /* StatusResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusResult.h; sourceTree = "<group>"; };
+		044879621E9E11BB009A678F /* StatusResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusResult.m; sourceTree = "<group>"; };
+		044879641E9E1D30009A678F /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		044879651E9E1D30009A678F /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		044879671E9E2181009A678F /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		044879681E9E2181009A678F /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		045780DC1E02311A00783CAB /* KVO_TargetWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVO_TargetWrapper.h; sourceTree = "<group>"; };
 		045780DD1E02311A00783CAB /* KVO_TargetWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVO_TargetWrapper.m; sourceTree = "<group>"; };
 		045780DF1E0284A600783CAB /* KVO_Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVO_Foo.h; sourceTree = "<group>"; };
@@ -226,6 +244,7 @@
 		0407AC861DE53C7700412ECA /* MyCollectionAbility */ = {
 			isa = PBXGroup;
 			children = (
+				0448794D1E9DD543009A678F /* MJExtensionLearn */,
 				04FAD7951E6A6D3A00139FDD /* SingelAndBlock */,
 				04708F581E4EAB0B00A39857 /* conformsToProtocol */,
 				0461EA241E0B7597001B8AFD /* NSChracterSet */,
@@ -370,6 +389,41 @@
 				0435CA131DE5747E00A9F1CF /* AboutNSUserDefualtViewController.m */,
 			);
 			path = NSUserDefualt;
+			sourceTree = "<group>";
+		};
+		0448794D1E9DD543009A678F /* MJExtensionLearn */ = {
+			isa = PBXGroup;
+			children = (
+				044879571E9DFB92009A678F /* Models */,
+				044879511E9DD8F6009A678F /* views */,
+				0448794E1E9DD559009A678F /* MJExtensionLearnViewController.h */,
+				0448794F1E9DD559009A678F /* MJExtensionLearnViewController.m */,
+			);
+			path = MJExtensionLearn;
+			sourceTree = "<group>";
+		};
+		044879511E9DD8F6009A678F /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		044879571E9DFB92009A678F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				044879581E9DFBA7009A678F /* User.h */,
+				044879591E9DFBA7009A678F /* User.m */,
+				0448795B1E9E0BF0009A678F /* Status.h */,
+				0448795C1E9E0BF0009A678F /* Status.m */,
+				044879611E9E11BB009A678F /* StatusResult.h */,
+				044879621E9E11BB009A678F /* StatusResult.m */,
+				044879641E9E1D30009A678F /* Student.h */,
+				044879651E9E1D30009A678F /* Student.m */,
+				044879671E9E2181009A678F /* Book.h */,
+				044879681E9E2181009A678F /* Book.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		0458A2D91DED21AA009F5D10 /* Modes */ = {
@@ -912,8 +966,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0448795A1E9DFBA7009A678F /* User.m in Sources */,
 				046A895E1DE7302600EC4F1D /* NSKeyedArichiverModel1.m in Sources */,
 				0435CA141DE5747E00A9F1CF /* AboutNSUserDefualtViewController.m in Sources */,
+				0448795D1E9E0BF0009A678F /* Status.m in Sources */,
 				04708F5E1E4EAB4E00A39857 /* ConformsToProtocolSon.m in Sources */,
 				0434E4DC1E01319300F8E86C /* KVO_Observer.m in Sources */,
 				04FAD7A11E6A6F4B00139FDD /* SingelAndBlockSecondObject.m in Sources */,
@@ -929,6 +985,7 @@
 				0458A2E51DED25AB009F5D10 /* EnumerateObjects.m in Sources */,
 				04708F5B1E4EAB3100A39857 /* ConformsToProtocolFather.m in Sources */,
 				0434E4DF1E0131B600F8E86C /* KVO_target.m in Sources */,
+				044879631E9E11BB009A678F /* StatusResult.m in Sources */,
 				046A896F1DE7C99000EC4F1D /* FileManagerObject.m in Sources */,
 				0434E4D01E00ED0200F8E86C /* DelegateInheritanceSon.m in Sources */,
 				0434E4CD1E00ECD900F8E86C /* DelegateInheritanceFather.m in Sources */,
@@ -936,13 +993,16 @@
 				0434E4D81E01316300F8E86C /* KVOViewController.m in Sources */,
 				045780DE1E02311A00783CAB /* KVO_TargetWrapper.m in Sources */,
 				0435CA021DE540E200A9F1CF /* HomeTabelViewDelegateObj.m in Sources */,
+				044879661E9E1D30009A678F /* Student.m in Sources */,
 				04708F611E4EACC500A39857 /* ConformsToProtocolViewController.m in Sources */,
 				04FAD7981E6A6D5000139FDD /* SingelAndBlockViewController.m in Sources */,
 				04FAD79B1E6A6DCF00139FDD /* SingelAndBlockSingel.m in Sources */,
 				0407AC891DE53C7700412ECA /* main.m in Sources */,
+				044879501E9DD559009A678F /* MJExtensionLearnViewController.m in Sources */,
 				0461EA2A1E0B75BD001B8AFD /* NSCharacterSetViewController.m in Sources */,
 				046A89621DE7308200EC4F1D /* NSKeyedArichiverViewController.m in Sources */,
 				04FAD79E1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m in Sources */,
+				044879691E9E2181009A678F /* Book.m in Sources */,
 				0435CA0B1DE546D300A9F1CF /* HomeTableViewController.m in Sources */,
 				0407ACBC1DE53DE300412ECA /* HomeTableView.m in Sources */,
 				0435CA111DE5745600A9F1CF /* AboutNSUserDefualtModel.m in Sources */,

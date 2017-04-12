@@ -76,7 +76,8 @@
              @"NotificationViewController",
              @"NSCharacterSetViewController",
              @"ConformsToProtocolViewController",
-             @"SingelAndBlockViewController"];
+             @"SingelAndBlockViewController",
+             @"MJExtensionLearnViewController"];
 }
 //#import "NotificationViewController.h"
 - (NSArray *)titleArr{
@@ -89,7 +90,8 @@
              @"07--通知中心",
              @"08--NSChracterSet",
              @"09--ConformsToProtocolViewController",
-             @"10--单类中使用block"];
+             @"10--单类中使用block",
+             @"11--MJExtension 学习"];
 }
 - (HomeTabelViewDelegateObj *)tableViewDelegateObj{
     if (!_tableViewDelegateObj) {
