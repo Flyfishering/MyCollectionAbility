@@ -26,6 +26,9 @@
 #import "FileManagerViewController.h"
 #import "EnumerateObjectsViewController.h"
 #import "ConformsToProtocolViewController.h"
+#import "SingleInstanceViewController.h"
+#import "WeakObjectViewController.h"
+#import "KVCViewController.h"
 @interface HomeTableViewController ()
 
 @property (nonatomic, strong) HomeTabelViewDelegateObj *tableViewDelegateObj;
@@ -73,11 +76,14 @@
              @"EnumerateObjectsViewController",
              @"DelegateInheritanceVC",
              @"KVOViewController",
+             @"KVCViewController",
              @"NotificationViewController",
              @"NSCharacterSetViewController",
              @"ConformsToProtocolViewController",
              @"SingelAndBlockViewController",
-             @"MJExtensionLearnViewController"];
+             @"MJExtensionLearnViewController",
+             @"SingleInstanceViewController",
+             @"WeakObjectViewController"];
 }
 //#import "NotificationViewController.h"
 - (NSArray *)titleArr{
@@ -87,11 +93,14 @@
              @"04--遍历数组字典的几种方法",
              @"05--代理的继承",
              @"06--KVO",
-             @"07--通知中心",
-             @"08--NSChracterSet",
-             @"09--ConformsToProtocolViewController",
-             @"10--单类中使用block",
-             @"11--MJExtension 学习"];
+             @"07--KVC",
+             @"08--通知中心",
+             @"09--NSChracterSet",
+             @"10--ConformsToProtocolViewController",
+             @"11--单类中使用block",
+             @"12--MJExtension 学习",
+             @"13--单例模式",
+             @"14--weak 弱引用"];
 }
 - (HomeTabelViewDelegateObj *)tableViewDelegateObj{
     if (!_tableViewDelegateObj) {
