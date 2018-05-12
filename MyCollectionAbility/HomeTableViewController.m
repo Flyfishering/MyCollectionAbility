@@ -29,6 +29,7 @@
 #import "SingleInstanceViewController.h"
 #import "WeakObjectViewController.h"
 #import "KVCViewController.h"
+#import "RunTimeViewController.h"
 @interface HomeTableViewController ()
 
 @property (nonatomic, strong) HomeTabelViewDelegateObj *tableViewDelegateObj;
@@ -83,7 +84,8 @@
              @"SingelAndBlockViewController",
              @"MJExtensionLearnViewController",
              @"SingleInstanceViewController",
-             @"WeakObjectViewController"];
+             @"WeakObjectViewController",
+             @"RunTimeViewController"];
 }
 //#import "NotificationViewController.h"
 - (NSArray *)titleArr{
@@ -100,7 +102,8 @@
              @"11--单类中使用block",
              @"12--MJExtension 学习",
              @"13--单例模式",
-             @"14--weak 弱引用"];
+             @"14--weak 弱引用",
+             @"15--runtime"];
 }
 - (HomeTabelViewDelegateObj *)tableViewDelegateObj{
     if (!_tableViewDelegateObj) {

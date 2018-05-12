@@ -78,6 +78,8 @@
 		40F076E2205A1D0500601E48 /* KVCValidatingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F076E1205A1D0500601E48 /* KVCValidatingObject.m */; };
 		40F076E6205BB5F500601E48 /* KVCGetSetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F076E5205BB5F500601E48 /* KVCGetSetObject.m */; };
 		A4E42F4360BD42B6D2336E5C /* libPods-MyCollectionAbility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D431651E4932E932FB81ACA /* libPods-MyCollectionAbility.a */; };
+		B7160A7720A2917B004E2BB9 /* RunTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7160A7620A2917B004E2BB9 /* RunTimeViewController.m */; };
+		B7160A7A20A291A6004E2BB9 /* NSInvocationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = B7160A7920A291A6004E2BB9 /* NSInvocationDemo.m */; };
 		C70D22C86357697FC5F196A1 /* libPods-MyCollectionAbilityUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0370ACF5B0B8C55495A29712 /* libPods-MyCollectionAbilityUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +240,10 @@
 		613232A1F232B6FCB4092D9B /* Pods-MyCollectionAbility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCollectionAbility.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCollectionAbility/Pods-MyCollectionAbility.release.xcconfig"; sourceTree = "<group>"; };
 		8CB0A64287B708967EC85EB2 /* Pods-MyCollectionAbility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCollectionAbility.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCollectionAbility/Pods-MyCollectionAbility.debug.xcconfig"; sourceTree = "<group>"; };
 		95CCF8F8E87569D094A2CB78 /* Pods-MyCollectionAbilityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCollectionAbilityTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCollectionAbilityTests/Pods-MyCollectionAbilityTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7160A7520A2917B004E2BB9 /* RunTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeViewController.h; sourceTree = "<group>"; };
+		B7160A7620A2917B004E2BB9 /* RunTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeViewController.m; sourceTree = "<group>"; };
+		B7160A7820A291A6004E2BB9 /* NSInvocationDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationDemo.h; sourceTree = "<group>"; };
+		B7160A7920A291A6004E2BB9 /* NSInvocationDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationDemo.m; sourceTree = "<group>"; };
 		D7B3D3E0D28BFBBA0D0C76AE /* Pods-MyCollectionAbilityUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCollectionAbilityUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCollectionAbilityUITests/Pods-MyCollectionAbilityUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F0A459EEFB300459DF42BFD1 /* Pods-MyCollectionAbilityUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCollectionAbilityUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCollectionAbilityUITests/Pods-MyCollectionAbilityUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -295,6 +301,7 @@
 		0407AC861DE53C7700412ECA /* MyCollectionAbility */ = {
 			isa = PBXGroup;
 			children = (
+				B7160A7420A29144004E2BB9 /* Runtime */,
 				406C3F2B2052BCCD00207356 /* Weak */,
 				406A584F204EE0F700D5EA5C /* SingleModel */,
 				0448794D1E9DD543009A678F /* MJExtensionLearn */,
@@ -802,6 +809,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B7160A7420A29144004E2BB9 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				B7160A7520A2917B004E2BB9 /* RunTimeViewController.h */,
+				B7160A7620A2917B004E2BB9 /* RunTimeViewController.m */,
+				B7160A7820A291A6004E2BB9 /* NSInvocationDemo.h */,
+				B7160A7920A291A6004E2BB9 /* NSInvocationDemo.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1103,6 +1121,7 @@
 				044879631E9E11BB009A678F /* StatusResult.m in Sources */,
 				40F076E6205BB5F500601E48 /* KVCGetSetObject.m in Sources */,
 				046A896F1DE7C99000EC4F1D /* FileManagerObject.m in Sources */,
+				B7160A7A20A291A6004E2BB9 /* NSInvocationDemo.m in Sources */,
 				0434E4D01E00ED0200F8E86C /* DelegateInheritanceSon.m in Sources */,
 				0434E4CD1E00ECD900F8E86C /* DelegateInheritanceFather.m in Sources */,
 				406A586A20501DA000D5EA5C /* SingleInstanceViewController.m in Sources */,
@@ -1126,6 +1145,7 @@
 				0461EA2A1E0B75BD001B8AFD /* NSCharacterSetViewController.m in Sources */,
 				046A89621DE7308200EC4F1D /* NSKeyedArichiverViewController.m in Sources */,
 				04FAD79E1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m in Sources */,
+				B7160A7720A2917B004E2BB9 /* RunTimeViewController.m in Sources */,
 				044879691E9E2181009A678F /* Book.m in Sources */,
 				409F3F1E2058BDAA00F24CB3 /* KVCViewController.m in Sources */,
 				0435CA0B1DE546D300A9F1CF /* HomeTableViewController.m in Sources */,
