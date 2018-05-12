@@ -30,6 +30,7 @@
 #import "WeakObjectViewController.h"
 #import "KVCViewController.h"
 #import "RunTimeViewController.h"
+#import "XibDemoTableViewController.h"
 @interface HomeTableViewController ()
 
 @property (nonatomic, strong) HomeTabelViewDelegateObj *tableViewDelegateObj;
@@ -85,7 +86,8 @@
              @"MJExtensionLearnViewController",
              @"SingleInstanceViewController",
              @"WeakObjectViewController",
-             @"RunTimeViewController"];
+             @"RunTimeViewController",
+             @"XibDemoTableViewController"];
 }
 //#import "NotificationViewController.h"
 - (NSArray *)titleArr{
@@ -103,7 +105,8 @@
              @"12--MJExtension 学习",
              @"13--单例模式",
              @"14--weak 弱引用",
-             @"15--runtime"];
+             @"15--runtime",
+             @"16--xib 相关"];
 }
 - (HomeTabelViewDelegateObj *)tableViewDelegateObj{
     if (!_tableViewDelegateObj) {
