@@ -131,7 +131,7 @@
     // 可以 通过 mutableArrayValueForKey 将 不可变数组属性 transactions 并像可变数组一样做操作（所有变化同步到 属性 transactions 中）
     [[self.myAccount mutableArrayValueForKey:@"transactions"] addObject:[KVCTransaction new]];
     // temp 并不是 KVCBankAccount 的属性，只是KVCBankAccount的一个私有方法。 kvc 可以触发这个方法。
-    NSString *temp = [self.myAccount valueForKey:@"temp"];
+    NSString *str = [self.myAccount valueForKey:@"privatMethod"];
     
     // TestValue 也不是 一个属性，并且可以当做数组来使用，可以偷用数组的api
             ///// 因为在 KVCBankAccount 中 实现了下面的方法
