@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface KVCValidatingObject : NSObject
-
+@property (nonatomic, strong) NSString *name;
 @end

@@ -25,12 +25,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.myAccount = [KVCBankAccount new];
+    //---------KVC get 的简单使用 ----
+    [self simpleSet];
     
     //-------KVC set 的简单使用 -----
     [self simpleGet];
-    
-    //---------KVC get 的简单使用 ----
-    [self simpleSet];
     
     //--------KVC 集合对象使用-----
     [self collectObject];
@@ -115,8 +114,10 @@
     //-------KVC set 的使用 -----
     [self.myAccount setValue:@(150) forKey:@"currentBalance"];
     [self.myAccount setValue:[self configTransactions] forKey:@"transactions"];
+    KVCPerson *person = [[KVCPerson alloc] init];
+    [self.myAccount setValue:person forKey:@"owner"];
     [self.myAccount setValue:@"王某某" forKeyPath:@"owner.name"];
-    [self.myAccount setValuesForKeysWithDictionary:@{@"currentBalance":@(200),@"owner":[NSNull null]}];
+//    [self.myAccount setValuesForKeysWithDictionary:@{@"currentBalance":@(200),@"owner":[NSNull null]}];
     
 }
 
@@ -127,35 +128,54 @@
     KVCAddress *address = [self.myAccount valueForKeyPath:@"owner.address"];
     
     NSDictionary *keyValueDic = [self.myAccount dictionaryWithValuesForKeys:@[@"currentBalance",@"owner",@"transactions"]];
+    // 可以 通过 mutableArrayValueForKey 将 不可变数组属性 transactions 并像可变数组一样做操作（所有变化同步到 属性 transactions 中）
+    [[self.myAccount mutableArrayValueForKey:@"transactions"] addObject:[KVCTransaction new]];
+    // temp 并不是 KVCBankAccount 的属性，只是KVCBankAccount的一个私有方法。 kvc 可以触发这个方法。
+    NSString *temp = [self.myAccount valueForKey:@"temp"];
+    
+    // TestValue 也不是 一个属性，并且可以当做数组来使用，可以偷用数组的api
+            ///// 因为在 KVCBankAccount 中 实现了下面的方法
+            ///// countOfTestValue
+            ///// TestValueAtIndexes: 或者 objectInTestValueAtIndex:
+    
+    NSInteger count = [[self.myAccount valueForKey:@"TestValue"] count];
+    NSLog(@"count = %ld",(long)count);
 }
 
 - (void)collectObject{
     // ------ Using Collection Operators--- 返回集合的某个对象
-    
+//    keypathToCollection.@collectionOperator.keypathToProperty
+//    left key path.    collection operator  right key path
     /*--@count--*/
-    NSNumber *numberOfTransactions = [self.myAccount.transactions valueForKeyPath:@"@count"];
+//    NSNumber *numberOfTransactions = [self.myAccount.transactions valueForKeyPath:@"@count"];
+    NSNumber *numberOfTransactions = [self.myAccount valueForKeyPath:@"transactions.@count"];
     NSLog(@"transactions 数量为 %d",numberOfTransactions.intValue);
     
     /*---@max---*/
-    NSDate *latestDate = [self.myAccount.transactions valueForKeyPath:@"@max.date"];
+//    NSDate *latestDate = [self.myAccount.transactions valueForKeyPath:@"@max.date"];
+    NSDate *latestDate = [self.myAccount valueForKeyPath:@"transactions.@max.date"];
     NSLog(@"最大日期是: %@",latestDate);
     
     /*---@min---*/
-    NSDate *earliestDate = [self.myAccount.transactions valueForKeyPath:@"@min.date"];
+//    NSDate *earliestDate = [self.myAccount.transactions valueForKeyPath:@"@min.date"];
+    NSDate *earliestDate = [self.myAccount valueForKeyPath:@"transactions.@min.date"];
     NSLog(@"最小日期是：%@",earliestDate);
     
     /*---@sum---*/
-    NSNumber *amountSum = [self.myAccount.transactions valueForKeyPath:@"@sum.amount"];
+//    NSNumber *amountSum = [self.myAccount.transactions valueForKeyPath:@"@sum.amount"];
+    NSNumber *amountSum = [self.myAccount valueForKeyPath:@"transactions.@sum.amount"];
     NSLog(@"总数是：%@",amountSum);
     
     //--------------Array Operators--- 应用集合对象
     /*---@distinctUnionOfObjects---去除重复对象*/
-    NSArray *distinctPayees = [self.myAccount.transactions valueForKeyPath:@"@distinctUnionOfObjects.payee"];
+//    NSArray *distinctPayees = [self.myAccount.transactions valueForKeyPath:@"@distinctUnionOfObjects.payee"];
+    NSArray *distinctPayees = [self.myAccount valueForKeyPath:@"transactions.@distinctUnionOfObjects.payee"];
     NSLog(@"distinctPayees = %@",distinctPayees);
     
     
     /*----@unionOfObjects---返回所有对象 */
-    NSArray *payees = [self.myAccount.transactions valueForKeyPath:@"@unionOfObjects.payee"];
+//    NSArray *payees = [self.myAccount.transactions valueForKeyPath:@"@unionOfObjects.payee"];
+    NSArray *payees = [self.myAccount valueForKeyPath:@"transactions.@unionOfObjects.payee"];
     NSLog(@"unionOfObjects = %@",payees);
     
     
