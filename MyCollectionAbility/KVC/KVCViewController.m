@@ -42,7 +42,7 @@
     [[KVCNonObjectValues new] setValueWithStruct];
     
     [self searchPatternfortheBasicGetter];
-    
+    [self setMethod];
     
     
 }
@@ -99,16 +99,36 @@
     
     
     // KVC 对集合对象的 get 操作， 
-    NSInteger bookCount = [getObject countOfBooks];
-    id obj = [getObject objectInBooksAtIndex:0];
+    NSInteger bookCount = [[getObject valueForKey:@"books"] count];
+    id obj = [[getObject valueForKey:@"books"] objectAtIndex:0];
     
     // kvc 可以操作 匿名分类中的实例变量，私有变量
     
     
-    // 可变集合类型 
+    // 可变集合类型 mutableArrayValueForKey
+    [getObject setValue:[@[@"1",@"2",@"3",@"4"] mutableCopy] forKey:@"mutableArray"];
+    [[getObject mutableArrayValueForKey:@"mutableArray"] addObject:@"5"];
+    NSLog(@"%@",[getObject mutableArrayValueForKey:@"mutableArray"] );
+    [[getObject mutableArrayValueForKey:@"mutableArray"] removeObjectAtIndex:0];
+    NSLog(@"%@",[getObject mutableArrayValueForKey:@"mutableArray"] );
+    [[getObject mutableArrayValueForKey:@"mutableArray"] replaceObjectAtIndex:0 withObject:@"100"];
+    NSLog(@"%@",[getObject mutableArrayValueForKey:@"mutableArray"] );
+    
+    // 可变集合类型 也可以使用 valueForKey
+    NSMutableArray *mutableArr = [getObject valueForKey:@"mutableArray"];
+    [mutableArr addObject:@"99"];
+    NSLog(@"mutableArr: %@  getObject.mutableArray = %@",mutableArr,getObject.mutableArray);
+    [mutableArr removeObjectAtIndex:0];
+    NSLog(@"mutableArr: %@  getObject.mutableArray = %@",mutableArr,getObject.mutableArray);
     
 }
 
+- (void)setMethod{
+    KVCGetSetObject *obj = [KVCGetSetObject new];
+    // bool 设置为 nil
+    [obj setValue:nil forKey:@"isHidden"];
+    
+}
 
 - (void)simpleSet{
     //-------KVC set 的使用 -----
@@ -133,13 +153,15 @@
     // temp 并不是 KVCBankAccount 的属性，只是KVCBankAccount的一个私有方法。 kvc 可以触发这个方法。
     NSString *str = [self.myAccount valueForKey:@"privatMethod"];
     
-    // TestValue 也不是 一个属性，并且可以当做数组来使用，可以偷用数组的api
+    // arrayProxyObject 也不是 一个属性，并且可以当做数组来使用，可以偷用数组的api
             ///// 因为在 KVCBankAccount 中 实现了下面的方法
             ///// countOfTestValue
             ///// TestValueAtIndexes: 或者 objectInTestValueAtIndex:
+    NSArray *arr = [self.myAccount valueForKey:@"arrayProxyObject"];
+    NSInteger count = [arr count];//[[self.myAccount valueForKey:@"arrayProxyObject"] count];
+    id objAtIndex = [arr objectAtIndex:0];
+    NSArray *subArr = [arr objectsAtIndexes:[NSIndexSet indexSetWithIndex:0]];
     
-    NSInteger count = [[self.myAccount valueForKey:@"TestValue"] count];
-    NSLog(@"count = %ld",(long)count);
 }
 
 - (void)collectObject{

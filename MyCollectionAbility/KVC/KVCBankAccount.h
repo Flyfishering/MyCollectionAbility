@@ -14,6 +14,6 @@
 @property (nonatomic) NSNumber* currentBalance;              // An attribute
 @property (nonatomic) KVCPerson* owner;                         // A to-one relation
 @property (nonatomic) NSArray< KVCTransaction* >* transactions; // A to-many relation
-
+//@property (nonatomic, strong) id arrayProxyObject;
 
 @end

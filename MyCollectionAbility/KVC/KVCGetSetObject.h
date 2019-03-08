@@ -26,7 +26,7 @@ typedef struct {
 @property (nonatomic, assign) BOOL isHidden;
 
 // kvc 返回 数组属性 方法
-- (NSUInteger)countOfBooks;
-- (id)objectInBooksAtIndex:(NSUInteger)index;
-- (NSArray *)booksAtIndexes:(NSIndexSet *)indexes;
+//- (NSUInteger)countOfBooks;
+//- (id)objectInBooksAtIndex:(NSUInteger)index;
+//- (NSArray *)booksAtIndexes:(NSIndexSet *)indexes;
 @end
