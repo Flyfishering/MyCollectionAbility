@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UndoViewController">
+            <connections>
+                <outlet property="numberLabel" destination="NON-a1-UI8" id="1mT-SO-6OC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NON-a1-UI8">
+                    <rect key="frame" x="182.5" y="323" width="10.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-2A-Pxn">
+                    <rect key="frame" x="114.5" y="243" width="46" height="30"/>
+                    <state key="normal" title="方法一"/>
+                    <connections>
+                        <action selector="methodOne:" destination="-1" eventType="touchUpInside" id="Wwm-MY-xQb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-DR-mIs">
+                    <rect key="frame" x="122" y="394" width="31" height="30"/>
+                    <state key="normal" title="撤销"/>
+                    <connections>
+                        <action selector="undo:" destination="-1" eventType="touchUpInside" id="mJB-IH-5F0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCW-q0-Buv">
+                    <rect key="frame" x="222" y="394" width="31" height="30"/>
+                    <state key="normal" title="复原"/>
+                    <connections>
+                        <action selector="redo:" destination="-1" eventType="touchUpInside" id="xB9-VH-0YA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJN-AB-KBr">
+                    <rect key="frame" x="214.5" y="243" width="46" height="30"/>
+                    <state key="normal" title="方法二"/>
+                    <connections>
+                        <action selector="methodTwo:" destination="-1" eventType="touchUpInside" id="nDT-4P-tsL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oJN-AB-KBr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="50" id="QkK-vf-TDp"/>
+                <constraint firstItem="q5y-DR-mIs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-50" id="WSh-gv-Vke"/>
+                <constraint firstItem="NON-a1-UI8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YNT-lu-AuI"/>
+                <constraint firstItem="q5y-DR-mIs" firstAttribute="top" secondItem="NON-a1-UI8" secondAttribute="bottom" constant="50" id="gvs-jZ-e1R"/>
+                <constraint firstItem="zCW-q0-Buv" firstAttribute="top" secondItem="NON-a1-UI8" secondAttribute="bottom" constant="50" id="jGG-lK-9kz"/>
+                <constraint firstItem="hxc-2A-Pxn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-50" id="k6G-2g-Dkj"/>
+                <constraint firstItem="zCW-q0-Buv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="50" id="neS-oe-9bx"/>
+                <constraint firstItem="NON-a1-UI8" firstAttribute="top" secondItem="oJN-AB-KBr" secondAttribute="bottom" constant="50" id="q7X-sY-hkO"/>
+                <constraint firstItem="NON-a1-UI8" firstAttribute="top" secondItem="hxc-2A-Pxn" secondAttribute="bottom" constant="50" id="rHY-Yo-mL5"/>
+                <constraint firstItem="NON-a1-UI8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yIc-5M-xAp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>

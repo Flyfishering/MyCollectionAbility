@@ -31,6 +31,7 @@
 #import "KVCViewController.h"
 #import "RunTimeViewController.h"
 #import "XibDemoTableViewController.h"
+#import "UndoViewController.h"
 @interface HomeTableViewController ()
 
 @property (nonatomic, strong) HomeTabelViewDelegateObj *tableViewDelegateObj;
@@ -87,7 +88,8 @@
              @"SingleInstanceViewController",
              @"WeakObjectViewController",
              @"RunTimeViewController",
-             @"XibDemoTableViewController"];
+             @"XibDemoTableViewController",
+             @"UndoViewController"];
 }
 //#import "NotificationViewController.h"
 - (NSArray *)titleArr{
@@ -106,7 +108,8 @@
              @"13--单例模式",
              @"14--weak 弱引用",
              @"15--runtime",
-             @"16--xib 相关"];
+             @"16--xib 相关",
+             @"17-- Undo 撤销 和 重做"];
 }
 - (HomeTabelViewDelegateObj *)tableViewDelegateObj{
     if (!_tableViewDelegateObj) {
