@@ -75,7 +75,6 @@
     return self.friends.count;
 }
 
-
 - (NSEnumerator *)enumeratorOfFriends{
     return [self.friends objectEnumerator];
 }
@@ -83,14 +82,13 @@
 //    
 //}
 
-// KVC 可变集合
+// KVC 可变集合  下面这四个方法 也可以不用实现 （有了下面这四个方法，性能更优）
 - (void)insertObject:(id )object inMutableArrayAtIndex:(NSInteger)index{
     [self.mutableArray insertObject:object atIndex:index];  
 }
 
 - (void)removeObjectFromMutableArrayAtIndex:(NSUInteger)index{
-
-    [self.mutableArray removeObjectAtIndex:index];  
+    [self.mutableArray removeObjectAtIndex:index];
 }
 
 - (void)insertMutableArray:(NSArray *)array atIndexes:(NSIndexSet *)indexes{
@@ -98,8 +96,7 @@
 }
 
 - (void)removeMutableArrayAtIndexes:(NSIndexSet *)indexes{
-
-    [self.mutableArray removeObjectsAtIndexes:indexes];   
+    [self.mutableArray removeObjectsAtIndexes:indexes];
 }
 
 //- (NSMutableArray *)mutableArrayValueForKey:(NSString *)key{

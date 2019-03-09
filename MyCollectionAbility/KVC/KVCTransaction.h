@@ -13,6 +13,7 @@
 @property (nonatomic) NSNumber* amount;  // How much
 @property (nonatomic) NSDate* date;      // When
 
+@property (nonatomic, strong) NSString *nilObj; // 测试空数据
 - (instancetype)initWithPayee:(NSString *) payee amount:(NSNumber *)amount date:(NSDate *)date;
 
 @end

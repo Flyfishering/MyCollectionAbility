@@ -1,10 +1,10 @@
 #  基于 get 的搜索模式
 
-1. 搜索实例方法：get<Key>, <key>, is<Key>, or _<key>,  如果找到了，就进入第 5 步， 没找到就进入下一步
+1. 搜索实例方法：get<Key>, <key>, is<Key>, or _<key>,  如果找到了 调用这些方法，就进入第 5 步， 没找到就进入下一步
 2. 搜索下面的名字的实例和方法：
     - `countOf<Key> `and `objectIn<Key>AtIndex: ` (属于 NSArray 定义的方法) 
     - `<key>AtIndexes:`(NSArray 方法 ：`objectsAtIndexes`)
-    如果找到了，就生成返回一个 集合的 代理对象
+    如果找到了- `countOf<Key> `方法，  `objectIn<Key>AtIndex: ` 和   - `<key>AtIndexes:` 中的一个，就生成返回一个 集合的 代理对象
     没找到，就如下一步
     > 代理对象将接收到的 `NSArray` 消息转换为 `countOf<Key>, objectIn<Key>AtIndex: ,<key>AtIndexes:,get<Key>:range:` 我们可以把代理对象当做 NSArray 使用
     

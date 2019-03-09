@@ -28,6 +28,11 @@ typedef struct {
     NSLog(@"resultValue = %@",resultValue);
 }
 
+- (void)setThreeFloats:(ThreeFloats)threeFloats{
+    _threeFloats = threeFloats;
+}
+
+
 + (void)scalarToNSNumber{
     NSNumber *boolNumber = [NSNumber numberWithBool:YES];
     BOOL boolValue = [boolNumber boolValue];
