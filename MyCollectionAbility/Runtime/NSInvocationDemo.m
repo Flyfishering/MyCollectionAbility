@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NSInvocationDemo.h"
-
+#import "InvocationObject.h"
 @implementation NSInvocationDemo
 - (void)method1Test
 
@@ -96,7 +96,14 @@
 //     [method3Invocation getReturnValue:&vc];
 //
 //     NSLog(@"vc:%@",vc);
-    
+
+    selector = @selector(methondOne);
+    NSMethodSignature *method4Sign = [[InvocationObject class] instanceMethodSignatureForSelector:selector];
+    //通过方法签名获得调用对象
+    NSInvocation *method4Invocation = [NSInvocation invocationWithMethodSignature:method4Sign];
+    [method4Invocation setTarget:[InvocationObject class]];
+    [method4Invocation setSelector:selector];
+    [method4Invocation invoke];
 }
 
 @end
