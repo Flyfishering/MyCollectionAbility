@@ -14,6 +14,8 @@
 #import "KVCBankAccount.h"
 #import <objc/runtime.h>
 #import "KVO_ManualChangeNotification.h"
+#import "KVO_DependentKeys.h"
+
 @interface KVOViewController ()
 
 @end
@@ -25,11 +27,14 @@
     [super viewDidLoad];
     
 //    [self kvoMethod];
-    [self KVO_ManualChangeNotification];
-//    - (void)KVO_ManualChangeNotification{
+//    [self KVO_ManualChangeNotification];
     
-    
-//文章地址 http://blog.csdn.net/kesalin/article/details/8194240
+    [self KVO_DependentKeysMethod];
+//    [self kvoMethod111];
+}
+
+- (void)kvoMethod111{
+    //文章地址 http://blog.csdn.net/kesalin/article/details/8194240
     KVO_target *target = [[KVO_target alloc] init];
     KVO_Observer *observer = [[KVO_Observer alloc] init];
     
@@ -75,8 +80,6 @@
     [y removeObserver:anything forKeyPath:@"y"];
     [xy removeObserver:anything forKeyPath:@"x"];
     [xy removeObserver:anything forKeyPath:@"y"];
-    
-    
 }
 
 - (void)kvoMethod{
@@ -192,6 +195,39 @@
     [obj removeObserver:self forKeyPath:@"number"];
     [obj removeObserver:self forKeyPath:@"arr"];
     [obj removeObserver:self forKeyPath:@"mutableArr"];
+}
+
+/// kvo 存在 key依赖的情况， fullName 依赖于 firstName 和 lastName
+- (void)KVO_DependentKeysMethod{
+    // key 依赖
+    KVO_DependentKeys *obj = [[KVO_DependentKeys alloc] init];
+    {
+        [obj addObserver:self forKeyPath:@"fullName" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+        
+        obj.firstName = @"wang";
+        obj.lastName = @"bin bin";
+        NSLog(@"fullName = %@",obj.fullName);
+        
+        [obj removeObserver:self forKeyPath:@"fullName"];
+    }
+    
+    // keyPath 依赖
+    KVO_target *target;
+    {
+        target = [[KVO_target alloc] init];
+        target.age = 20;
+        target.grade = 5;
+    }
+    
+    KVO_DependentKeys *objKeyPath = [[KVO_DependentKeys alloc] init];
+    {
+        objKeyPath.target = target;
+        [objKeyPath addObserver:self forKeyPath:@"information" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+        target.age = 22;
+        target.grade = 7;
+        NSLog(@"information = %@",objKeyPath.information);
+        [objKeyPath removeObserver:self forKeyPath:@"information" ];
+    }
 }
 
 #pragma mark - KVO responsed

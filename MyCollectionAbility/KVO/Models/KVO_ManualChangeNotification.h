@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 手动触发 kvo
+ */
 @interface KVO_ManualChangeNotification : NSObject
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) int number;
