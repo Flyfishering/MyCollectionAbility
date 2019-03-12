@@ -89,6 +89,7 @@
 		B72642E520B3C98F00C2C71C /* UndoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B72642E320B3C98F00C2C71C /* UndoViewController.m */; };
 		B72642E620B3C98F00C2C71C /* UndoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B72642E420B3C98F00C2C71C /* UndoViewController.xib */; };
 		C70D22C86357697FC5F196A1 /* libPods-MyCollectionAbilityUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0370ACF5B0B8C55495A29712 /* libPods-MyCollectionAbilityUITests.a */; };
+		F14C4F62223685AB00D62D04 /* KVO_ManualChangeNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F14C4F61223685AB00D62D04 /* KVO_ManualChangeNotification.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +270,8 @@
 		B72642E420B3C98F00C2C71C /* UndoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UndoViewController.xib; sourceTree = "<group>"; };
 		D7B3D3E0D28BFBBA0D0C76AE /* Pods-MyCollectionAbilityUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCollectionAbilityUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCollectionAbilityUITests/Pods-MyCollectionAbilityUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F0A459EEFB300459DF42BFD1 /* Pods-MyCollectionAbilityUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCollectionAbilityUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCollectionAbilityUITests/Pods-MyCollectionAbilityUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F14C4F60223685AB00D62D04 /* KVO_ManualChangeNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_ManualChangeNotification.h; sourceTree = "<group>"; };
+		F14C4F61223685AB00D62D04 /* KVO_ManualChangeNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_ManualChangeNotification.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -445,6 +448,8 @@
 				045780DD1E02311A00783CAB /* KVO_TargetWrapper.m */,
 				045780DF1E0284A600783CAB /* KVO_Foo.h */,
 				045780E01E0284A600783CAB /* KVO_Foo.m */,
+				F14C4F60223685AB00D62D04 /* KVO_ManualChangeNotification.h */,
+				F14C4F61223685AB00D62D04 /* KVO_ManualChangeNotification.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1176,6 +1181,7 @@
 				B7160A8420A6A8D6004E2BB9 /* XibDemoTableViewController.m in Sources */,
 				40F076E2205A1D0500601E48 /* KVCValidatingObject.m in Sources */,
 				B7160A8F20A6BFD7004E2BB9 /* XIB_CustomButton.m in Sources */,
+				F14C4F62223685AB00D62D04 /* KVO_ManualChangeNotification.m in Sources */,
 				0434E4DF1E0131B600F8E86C /* KVO_target.m in Sources */,
 				406A585E204EECE800D5EA5C /* SingleInstance3.m in Sources */,
 				044879631E9E11BB009A678F /* StatusResult.m in Sources */,

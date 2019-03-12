@@ -11,7 +11,9 @@
 #import "KVO_Observer.h"
 #import "KVO_TargetWrapper.h"
 #import "KVO_Foo.h"
+#import "KVCBankAccount.h"
 #import <objc/runtime.h>
+#import "KVO_ManualChangeNotification.h"
 @interface KVOViewController ()
 
 @end
@@ -21,12 +23,19 @@
 #pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    [self kvoMethod];
+    [self KVO_ManualChangeNotification];
+//    - (void)KVO_ManualChangeNotification{
+    
+    
 //文章地址 http://blog.csdn.net/kesalin/article/details/8194240
     KVO_target *target = [[KVO_target alloc] init];
     KVO_Observer *observer = [[KVO_Observer alloc] init];
     
     [target addObserver:observer forKeyPath:@"age" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:(__bridge void * _Nullable)([KVO_target class])];
     [target setAge:100];
+    // observer = nil; 如果在 removeObserver 之前 释放 observer, 会出现异常
     [target setGrade:100];
     [target removeObserver:observer forKeyPath:@"age"];
     
@@ -70,6 +79,126 @@
     
 }
 
+- (void)kvoMethod{
+    KVCBankAccount *account = [[KVCBankAccount alloc] init];
+    // add
+    [account addObserver:self forKeyPath:@"currentBalance" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [account addObserver:self forKeyPath:@"owner" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [account addObserver:self forKeyPath:@"owner.name" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [account addObserver:self forKeyPath:@"transactions" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [account addObserver:self forKeyPath:@"mutableArr" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    
+    // change
+//    account.currentBalance = @(100);
+//    account.owner = [self configOwner];
+//    account.owner.name  =  @"王某某";
+    account.transactions = [self configTransactions];
+    NSMutableArray *mutableTransactions = [account mutableArrayValueForKey:@"transactions"];
+    [mutableTransactions addObject:[[KVCTransaction alloc] initWithPayee:@"ennnn" amount:@(123) date:[NSDate date]]];
+    KVCTransaction *transaction = mutableTransactions.lastObject;
+    transaction.amount = @(0);
+    account.mutableArr = [@[@"1",@"2",@"3"] mutableCopy];
+    NSMutableArray *mutableArr = [account mutableArrayValueForKey:@"mutableArr"];
+    //// 这个方法不会触发 kvo
+    [account.mutableArr addObject:@"4"];
+    ///// 这个方法可以触发 kvo 
+    [mutableArr addObject:@"4"];
+    // remove
+    [account removeObserver:self forKeyPath:@"currentBalance"];
+    [account removeObserver:self forKeyPath:@"owner"];
+    [account removeObserver:self forKeyPath:@"owner.name"];
+    [account removeObserver:self forKeyPath:@"transactions"];
+    [account removeObserver:self forKeyPath:@"mutableArr"];
+}
+
+/// 手动管理 kvo
+- (void)KVO_ManualChangeNotification{
+    KVO_ManualChangeNotification *obj = [[KVO_ManualChangeNotification alloc] init];
+    [obj addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [obj addObserver:self forKeyPath:@"number" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [obj addObserver:self forKeyPath:@"arr" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [obj addObserver:self forKeyPath:@"mutableArr" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    obj.name = @"李大爷";
+    obj.number = 100;
+    obj.arr = @[@"apple",@"google",@"IBM"];
+    
+    // 下面会贴上 kvo 响应方法 observeValueForKeyPath，中参数  change
+    NSMutableArray *mutableArr = [obj mutableArrayValueForKey:@"mutableArr"];
+    [mutableArr addObject:@"100"];
+        //change: {
+        //    indexes = "<_NSCachedIndexSet: 0x600000deb680>[number of indexes: 1 (in 1 ranges), indexes: (3)]";
+        //    kind = 2;
+        //    new =     (100);
+        //}
+    [mutableArr removeObjectAtIndex:0];
+        //change: {
+        //    indexes = "<_NSCachedIndexSet: 0x600000deb620>[number of indexes: 1 (in 1 ranges), indexes: (0)]";
+        //    kind = 3;
+        //    old =     (one);
+        //},
+    [mutableArr addObjectsFromArray:@[@"90",@"91"]];
+        //change: {
+        //    indexes = "<_NSCachedIndexSet: 0x600000deb680>[number of indexes: 1 (in 1 ranges), indexes: (3)]";
+        //    kind = 2;
+        //    new =     (
+        //               90
+        //               );
+        //},
+    
+        //change: {
+        //    indexes = "<_NSCachedIndexSet: 0x600000deb6a0>[number of indexes: 1 (in 1 ranges), indexes: (4)]";
+        //    kind = 2;
+        //    new =     (
+        //               91
+        //               );
+        //},
+    [mutableArr removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 2)]];
+        //change: {
+        //    indexes = "<NSIndexSet: 0x600000da8c40>[number of indexes: 2 (in 1 ranges), indexes: (0-1)]";
+        //    kind = 3;
+        //    old =     (
+        //               two,
+        //               three
+        //               );
+        //},
+    [mutableArr replaceObjectAtIndex:0 withObject:@"替换"];
+        //change: {
+        //    indexes = "<_NSCachedIndexSet: 0x6000017f7100>[number of indexes: 1 (in 1 ranges), indexes: (0)]";
+        //    kind = 4;
+        //    new =     (
+        //               "替换"
+        //               );
+        //    old =     (
+        //               one
+        //               );
+        //},
+    NSArray *objs = @[@"替换: 1",@"替换: 2"];
+    [mutableArr replaceObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, objs.count)] withObjects:objs];
+    //change: {
+    //    indexes = "<NSIndexSet: 0x600003d12cc0>[number of indexes: 2 (in 1 ranges), indexes: (0-1)]";
+    //    kind = 4;
+    //    new =     (
+    //               "替换: 1",
+    //               "替换: 2"
+    //               );
+    //    old =     (
+    //               "替换",
+    //               two
+    //               );
+    //},
+    
+    /// remove
+    [obj removeObserver:self forKeyPath:@"name"];
+    [obj removeObserver:self forKeyPath:@"number"];
+    [obj removeObserver:self forKeyPath:@"arr"];
+    [obj removeObserver:self forKeyPath:@"mutableArr"];
+}
+
+#pragma mark - KVO responsed
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    NSLog(@"kvo responsed");
+    NSLog(@"\n\t keyPath: %@,  \n\t object: %@, \n\t change: %@, \n\t context: @%",keyPath,object,change,context);
+}
 
 #pragma mark - c methods
 //获取所有方法
@@ -105,10 +234,48 @@ static void PrintDescription(NSString * name, id obj)
 
 
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+
+
+#pragma - mark private method
+
+- (NSArray *)configTransactions {
+    NSArray *payees = @[@"Green Power",@"Green Power",@"Green Power",
+                        @"Car Loan",@"Car Loan",@"Car Loan",
+                        @"General Cable",@"General Cable",@"General Cable",
+                        @"Mortgage",@"Mortgage",@"Mortgage",
+                        @"Animal Hospital"
+                        ];
+    NSArray *amounts = @[@(120.0),@(150.0),@(170.0),
+                         @(250.00),@(250.00),@(250.00),
+                         @(120.00),@(155.00),@(120.00),
+                         @(1250.00),@(1250.00),@(1250.00),
+                         @(600.00)];
+    NSArray *dateString = @[@"04-09-2016",@"06-12-2016",@"08-01-2015",
+                            @"05-16-2015",@"07-12-2015",@"08-10-2015",
+                            @"01-12-2015",@"04-12-2015",@"03-12-2015",
+                            @"02-03-2015",@"05-12-2015",@"02-12-2016",
+                            @"02-11-2015"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeZone = [NSTimeZone localTimeZone];
+    dateFormatter.dateFormat = @"M-d-yyyy";
     
+    NSMutableArray *mutableArr = [NSMutableArray array];
+    for (NSInteger i=0; i<payees.count; i++) {
+        NSDate *date = [dateFormatter dateFromString:dateString[i]];
+        KVCTransaction *tra = [[KVCTransaction alloc] initWithPayee:payees[i] amount:amounts[i] date:date];
+        [mutableArr addObject:tra];
+    }
+    return [mutableArr copy];
 }
 
+- (KVCPerson *)configOwner{
+    KVCPerson * person = [KVCPerson new];
+    person.name = @"王大爷";
+    KVCAddress *address = [KVCAddress new];
+    address.street = @"复兴路";
+    person.address = address;
+    return person;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
