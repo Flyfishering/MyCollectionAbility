@@ -91,6 +91,8 @@
 		C70D22C86357697FC5F196A1 /* libPods-MyCollectionAbilityUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0370ACF5B0B8C55495A29712 /* libPods-MyCollectionAbilityUITests.a */; };
 		F14C4F62223685AB00D62D04 /* KVO_ManualChangeNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F14C4F61223685AB00D62D04 /* KVO_ManualChangeNotification.m */; };
 		F14C4F6522379AF500D62D04 /* KVO_DependentKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = F14C4F6422379AF500D62D04 /* KVO_DependentKeys.m */; };
+		F14C4F6B2237AFC500D62D04 /* KVO_Employees.m in Sources */ = {isa = PBXBuildFile; fileRef = F14C4F6A2237AFC500D62D04 /* KVO_Employees.m */; };
+		F14C4F6E2237B2E600D62D04 /* KVO_Department.m in Sources */ = {isa = PBXBuildFile; fileRef = F14C4F6D2237B2E600D62D04 /* KVO_Department.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -275,6 +277,11 @@
 		F14C4F61223685AB00D62D04 /* KVO_ManualChangeNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_ManualChangeNotification.m; sourceTree = "<group>"; };
 		F14C4F6322379AF500D62D04 /* KVO_DependentKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_DependentKeys.h; sourceTree = "<group>"; };
 		F14C4F6422379AF500D62D04 /* KVO_DependentKeys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_DependentKeys.m; sourceTree = "<group>"; };
+		F14C4F692237AFC500D62D04 /* KVO_Employees.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_Employees.h; sourceTree = "<group>"; };
+		F14C4F6A2237AFC500D62D04 /* KVO_Employees.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_Employees.m; sourceTree = "<group>"; };
+		F14C4F6C2237B2E600D62D04 /* KVO_Department.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_Department.h; sourceTree = "<group>"; };
+		F14C4F6D2237B2E600D62D04 /* KVO_Department.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_Department.m; sourceTree = "<group>"; };
+		F14C4F6F2237C14200D62D04 /* KVO_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -455,6 +462,10 @@
 				F14C4F61223685AB00D62D04 /* KVO_ManualChangeNotification.m */,
 				F14C4F6322379AF500D62D04 /* KVO_DependentKeys.h */,
 				F14C4F6422379AF500D62D04 /* KVO_DependentKeys.m */,
+				F14C4F692237AFC500D62D04 /* KVO_Employees.h */,
+				F14C4F6A2237AFC500D62D04 /* KVO_Employees.m */,
+				F14C4F6C2237B2E600D62D04 /* KVO_Department.h */,
+				F14C4F6D2237B2E600D62D04 /* KVO_Department.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -465,6 +476,7 @@
 				0434E4D51E01316300F8E86C /* KVOViewController.h */,
 				0434E4D61E01316300F8E86C /* KVOViewController.m */,
 				0434E4D71E01316300F8E86C /* KVOViewController.xib */,
+				F14C4F6F2237C14200D62D04 /* KVO_Header.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1191,6 +1203,7 @@
 				406A585E204EECE800D5EA5C /* SingleInstance3.m in Sources */,
 				044879631E9E11BB009A678F /* StatusResult.m in Sources */,
 				40F076E6205BB5F500601E48 /* KVCGetSetObject.m in Sources */,
+				F14C4F6E2237B2E600D62D04 /* KVO_Department.m in Sources */,
 				B72642E020B278FC00C2C71C /* InvocationObject.m in Sources */,
 				046A896F1DE7C99000EC4F1D /* FileManagerObject.m in Sources */,
 				B7160A7A20A291A6004E2BB9 /* NSInvocationDemo.m in Sources */,
@@ -1202,6 +1215,7 @@
 				409F3F272058BE1900F24CB3 /* KVCTransaction.m in Sources */,
 				406A5855204EE15000D5EA5C /* SingleObject.m in Sources */,
 				409F3F2A2058BFE900F24CB3 /* KVCAddress.m in Sources */,
+				F14C4F6B2237AFC500D62D04 /* KVO_Employees.m in Sources */,
 				045780DE1E02311A00783CAB /* KVO_TargetWrapper.m in Sources */,
 				0435CA021DE540E200A9F1CF /* HomeTabelViewDelegateObj.m in Sources */,
 				044879661E9E1D30009A678F /* Student.m in Sources */,

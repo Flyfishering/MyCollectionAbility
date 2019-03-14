@@ -15,7 +15,12 @@
 #import <objc/runtime.h>
 #import "KVO_ManualChangeNotification.h"
 #import "KVO_DependentKeys.h"
+#import "KVO_Department.h"
+#import "KVO_Employees.h"
+#import "KVO_Header.h"
 
+
+static  void *  totalSalaryContext = &totalSalaryContext;
 @interface KVOViewController ()
 
 @end
@@ -29,8 +34,26 @@
 //    [self kvoMethod];
 //    [self KVO_ManualChangeNotification];
     
-    [self KVO_DependentKeysMethod];
+//    [self KVO_DependentKeysMethod];
+    [self KVO_DependentKeysMethod_ToManyRelationships];
 //    [self kvoMethod111];
+//    [self testContext];
+}
+
+- (void)testContext{
+    KVO_Employees *employees = [[KVO_Employees alloc] init];
+    KVO_Department *department = [[KVO_Department alloc] init];
+//    [employees addObserver:self forKeyPath:@"salary" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+//    employees.salary = @(10);
+//
+//    [employees removeObserver:self forKeyPath:@"salary"];
+//    [employees removeObserver:department forKeyPath:@"salary" context:totalSalaryContext];
+
+    [department observeObject:employees key:NSStringFromSelector(@selector(salary))];
+//    [department addObserver:employees forKeyPath:@"totalSalary" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:totalSalaryContext];
+    employees.salary = @(10);
+    department.totalSalary = @(20);
+//    [department removeObserver:employees forKeyPath:@"totalSalary" context:totalSalaryContext];
 }
 
 - (void)kvoMethod111{
@@ -92,9 +115,10 @@
     [account addObserver:self forKeyPath:@"mutableArr" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     
     // change
-//    account.currentBalance = @(100);
-//    account.owner = [self configOwner];
-//    account.owner.name  =  @"王某某";
+    account.currentBalance = @(100);
+    account.owner = [self configOwner];
+    account.owner.name  =  @"王某某";
+    
     account.transactions = [self configTransactions];
     NSMutableArray *mutableTransactions = [account mutableArrayValueForKey:@"transactions"];
     [mutableTransactions addObject:[[KVCTransaction alloc] initWithPayee:@"ennnn" amount:@(123) date:[NSDate date]]];
@@ -113,7 +137,7 @@
     [account removeObserver:self forKeyPath:@"transactions"];
     [account removeObserver:self forKeyPath:@"mutableArr"];
 }
-
+#pragma mark - kvo 手动管理 kvo
 /// 手动管理 kvo
 - (void)KVO_ManualChangeNotification{
     KVO_ManualChangeNotification *obj = [[KVO_ManualChangeNotification alloc] init];
@@ -196,7 +220,7 @@
     [obj removeObserver:self forKeyPath:@"arr"];
     [obj removeObserver:self forKeyPath:@"mutableArr"];
 }
-
+#pragma mark - kvo key key依赖的情况
 /// kvo 存在 key依赖的情况， fullName 依赖于 firstName 和 lastName
 - (void)KVO_DependentKeysMethod{
     // key 依赖
@@ -229,9 +253,59 @@
         [objKeyPath removeObserver:self forKeyPath:@"information" ];
     }
 }
+#pragma mark - kvo key 依赖多个关系
+// ----------------------key 依赖多个关系---------------------
+// 数组中拥有数字元素，要求每次数字元素改变时都要重新计算整个数组的所有数字总和
+- (void)KVO_DependentKeysMethod_ToManyRelationships{
+    KVO_Department *department = [[KVO_Department alloc] init];
+    department.employees = [NSMutableArray array];
+    // 获取 可变数组属性 employees 的代理对象 mutableArr
+    NSMutableArray *mutableArr = [department mutableArrayValueForKey:NSStringFromSelector(@selector(employees))];
+    // 观察 totalSalary
+    [department addObserver:self forKeyPath:NSStringFromSelector(@selector(totalSalary)) options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:totalSalaryContext];
+    {
+        KVO_Employees *emplayee1 = [[KVO_Employees alloc] init];
+        KVO_Employees *emplayee2 = [[KVO_Employees alloc] init];
+        KVO_Employees *emplayee3 = [[KVO_Employees alloc] init];
+        
+        // 加入数组  KVO_Department 中实现了方法 `insertObject:inEmployeesAtIndex`
+                    // 每次添加元素都会调用方法 `insertObject:inEmployeesAtIndex`
+                    // 我们在这个方法中 对添加的元素 同时添加 kvo
+        [mutableArr addObject:emplayee1];
+        [mutableArr addObject:emplayee2];
+        [mutableArr addObject:emplayee3];
+        // 修改元素 数值 会影响 totalSalary
+        emplayee1.salary = @(100);
+        emplayee2.salary = @(200);
+        emplayee3.salary = @(300);
+        
+        // 再次 修改元素 数值, 会影响 totalSalary
+        emplayee1.salary = @(0);
+        emplayee2.salary = @(1000);
+        emplayee3.salary = @(1);
+        
+        // 删除 一个元素  KVO_Department 中实现了方法 `removeObjectFromEmployeesAtIndex`
+                    // 每次添加元素都会调用方法 `removeObjectFromEmployeesAtIndex`
+                    // 我们在这个方法中 对删除的元素 同时移除 kvo
+        [mutableArr removeObject:emplayee2];
+        
+        // 再次 修改元素 数值  emplayee2 在上面已经被删除(同时从容器和kvo移除) 不影响 totalSalary
+        emplayee1.salary = @(1);
+        emplayee2.salary = @(2); // 不会触发 kvo
+        emplayee3.salary = @(3);
+        
+        [mutableArr removeObject:emplayee1];
+        //这里重复移除 emplayee2 并不会触发 removeObjectFromEmployeesAtIndex
+        [mutableArr removeObject:emplayee2];
+        [mutableArr removeObject:emplayee3];
+    }
+    NSLog(@"totalSalary = %@",department.totalSalary);
+    [department removeObserver:self forKeyPath:@"totalSalary"];
+}
 
 #pragma mark - KVO responsed
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    
     NSLog(@"kvo responsed");
     NSLog(@"\n\t keyPath: %@,  \n\t object: %@, \n\t change: %@, \n\t context: @%",keyPath,object,change,context);
 }
