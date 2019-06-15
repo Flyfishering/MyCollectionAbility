@@ -60,6 +60,7 @@
 		04FAD79B1E6A6DCF00139FDD /* SingelAndBlockSingel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD79A1E6A6DCF00139FDD /* SingelAndBlockSingel.m */; };
 		04FAD79E1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD79D1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m */; };
 		04FAD7A11E6A6F4B00139FDD /* SingelAndBlockSecondObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD7A01E6A6F4B00139FDD /* SingelAndBlockSecondObject.m */; };
+		403EBFC92252550A003E2309 /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 403EBFC82252550A003E2309 /* UIButton+EnlargeTouchArea.m */; };
 		406A5852204EE11400D5EA5C /* SingleInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A5851204EE11400D5EA5C /* SingleInstance.m */; };
 		406A5855204EE15000D5EA5C /* SingleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A5854204EE15000D5EA5C /* SingleObject.m */; };
 		406A5858204EE49D00D5EA5C /* SingleInstance1.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A5857204EE49D00D5EA5C /* SingleInstance1.m */; };
@@ -209,6 +210,8 @@
 		04FAD79F1E6A6F4B00139FDD /* SingelAndBlockSecondObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingelAndBlockSecondObject.h; sourceTree = "<group>"; };
 		04FAD7A01E6A6F4B00139FDD /* SingelAndBlockSecondObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingelAndBlockSecondObject.m; sourceTree = "<group>"; };
 		1D431651E4932E932FB81ACA /* libPods-MyCollectionAbility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCollectionAbility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		403EBFC72252550A003E2309 /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
+		403EBFC82252550A003E2309 /* UIButton+EnlargeTouchArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeTouchArea.m"; sourceTree = "<group>"; };
 		406A5850204EE11400D5EA5C /* SingleInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleInstance.h; sourceTree = "<group>"; };
 		406A5851204EE11400D5EA5C /* SingleInstance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleInstance.m; sourceTree = "<group>"; };
 		406A5853204EE15000D5EA5C /* SingleObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleObject.h; sourceTree = "<group>"; };
@@ -324,6 +327,7 @@
 		0407AC861DE53C7700412ECA /* MyCollectionAbility */ = {
 			isa = PBXGroup;
 			children = (
+				403EBFC6225254D1003E2309 /* Category */,
 				B72642E120B3C97700C2C71C /* Undo */,
 				B7160A8120A6A87F004E2BB9 /* XIBdemo */,
 				B7160A7420A29144004E2BB9 /* Runtime */,
@@ -766,6 +770,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		403EBFC6225254D1003E2309 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				403EBFC72252550A003E2309 /* UIButton+EnlargeTouchArea.h */,
+				403EBFC82252550A003E2309 /* UIButton+EnlargeTouchArea.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		406A584F204EE0F700D5EA5C /* SingleModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1184,6 +1197,7 @@
 				046A896F1DE7C99000EC4F1D /* FileManagerObject.m in Sources */,
 				B7160A7A20A291A6004E2BB9 /* NSInvocationDemo.m in Sources */,
 				0434E4D01E00ED0200F8E86C /* DelegateInheritanceSon.m in Sources */,
+				403EBFC92252550A003E2309 /* UIButton+EnlargeTouchArea.m in Sources */,
 				0434E4CD1E00ECD900F8E86C /* DelegateInheritanceFather.m in Sources */,
 				406A586A20501DA000D5EA5C /* SingleInstanceViewController.m in Sources */,
 				045780ED1E03CFE000783CAB /* SonArichiver.m in Sources */,
