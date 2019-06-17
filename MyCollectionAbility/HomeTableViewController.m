@@ -32,6 +32,8 @@
 #import "RunTimeViewController.h"
 #import "XibDemoTableViewController.h"
 #import "UndoViewController.h"
+//#import "LayoutSubviewDemoVC.h"
+#import "MyCollectionAbility-Swift.h"
 @interface HomeTableViewController ()
 
 @property (nonatomic, strong) HomeTabelViewDelegateObj *tableViewDelegateObj;
@@ -65,7 +67,10 @@
     
     NSLog(@"%s",__func__);
     UIViewController *viewController = [NSClassFromString(self.viewControllers[indexPath.row]) new] ;
-    
+    if (indexPath.row == 17) {
+        viewController = [[LayoutSubviewDemoVC alloc] init];
+        
+    }
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
@@ -89,7 +94,8 @@
              @"WeakObjectViewController",
              @"RunTimeViewController",
              @"XibDemoTableViewController",
-             @"UndoViewController"];
+             @"UndoViewController",
+             @"LayoutSubviewDemoVC"];
 }
 //#import "NotificationViewController.h"
 - (NSArray *)titleArr{
@@ -109,7 +115,8 @@
              @"14--weak 弱引用",
              @"15--runtime",
              @"16--xib 相关",
-             @"17-- Undo 撤销 和 重做"];
+             @"17-- Undo 撤销 和 重做",
+             @"18-- view 的 layoutSubviews 方法"];
 }
 - (HomeTabelViewDelegateObj *)tableViewDelegateObj{
     if (!_tableViewDelegateObj) {
