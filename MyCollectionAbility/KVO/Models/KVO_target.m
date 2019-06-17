@@ -24,7 +24,9 @@
     return self;
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    
+- (void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context{
+    NSLog(@"file: %@   context: %p",NSStringFromClass([self class]), context);
+    NSLog(@"file: %@    ",NSStringFromClass([self class]));
 }
+
 @end

@@ -79,4 +79,20 @@
 
 //------------------------------
 
+- (void)insertMutableArr:(NSArray *)array atIndexes:(NSIndexSet *)indexes{
+    [self.mutableArr insertObjects:array atIndexes:indexes];
+}
+
+- (void)insertObject:(NSString *)object inMutableArrAtIndex:(NSUInteger)index{
+    [self.mutableArr insertObject:object atIndex:index];
+}
+
+- (void)removeMutableArrAtIndexes:(NSIndexSet *)indexes{
+    [self.mutableArr removeObjectsAtIndexes:indexes];
+}
+- (void)removeObjectFromMutableArrAtIndex:(NSUInteger)index{
+    [self.mutableArr removeObjectAtIndex:index];
+}
+
+
 @end

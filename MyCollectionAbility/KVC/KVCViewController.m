@@ -107,10 +107,13 @@
     
     // 可变集合类型 mutableArrayValueForKey
     [getObject setValue:[@[@"1",@"2",@"3",@"4"] mutableCopy] forKey:@"mutableArray"];
+    // 添加
     [[getObject mutableArrayValueForKey:@"mutableArray"] addObject:@"5"];
     NSLog(@"%@",[getObject mutableArrayValueForKey:@"mutableArray"] );
+    // 删除
     [[getObject mutableArrayValueForKey:@"mutableArray"] removeObjectAtIndex:0];
     NSLog(@"%@",[getObject mutableArrayValueForKey:@"mutableArray"] );
+    // 替换
     [[getObject mutableArrayValueForKey:@"mutableArray"] replaceObjectAtIndex:0 withObject:@"100"];
     NSLog(@"%@",[getObject mutableArrayValueForKey:@"mutableArray"] );
     

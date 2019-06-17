@@ -12,7 +12,6 @@
 {
     int age;
 }
-
 @property (nonatomic, readwrite) int grade;
 
 // for manual KVO - age
