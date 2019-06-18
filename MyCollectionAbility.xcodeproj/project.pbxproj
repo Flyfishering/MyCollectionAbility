@@ -215,6 +215,7 @@
 		04FAD79F1E6A6F4B00139FDD /* SingelAndBlockSecondObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingelAndBlockSecondObject.h; sourceTree = "<group>"; };
 		04FAD7A01E6A6F4B00139FDD /* SingelAndBlockSecondObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingelAndBlockSecondObject.m; sourceTree = "<group>"; };
 		1D431651E4932E932FB81ACA /* libPods-MyCollectionAbility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCollectionAbility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4019A7E022B91B5E0077E673 /* LayoutSubviewsDemo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LayoutSubviewsDemo.md; sourceTree = "<group>"; };
 		403EBFC72252550A003E2309 /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
 		403EBFC82252550A003E2309 /* UIButton+EnlargeTouchArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeTouchArea.m"; sourceTree = "<group>"; };
 		404EF97C22B53B5D004F4784 /* MyCollectionAbility-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyCollectionAbility-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -810,6 +811,7 @@
 			children = (
 				404EF97D22B53B5D004F4784 /* LayoutSubviewDemoVC.swift */,
 				404EF97C22B53B5D004F4784 /* MyCollectionAbility-Bridging-Header.h */,
+				4019A7E022B91B5E0077E673 /* LayoutSubviewsDemo.md */,
 			);
 			path = LayoutSubviewsDemo;
 			sourceTree = "<group>";
