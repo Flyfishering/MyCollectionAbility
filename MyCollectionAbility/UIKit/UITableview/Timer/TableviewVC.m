@@ -28,8 +28,8 @@
     if (!_data) {
         NSMutableArray *arr = [@[] mutableCopy];
         TableviewCellItem *item = [TableviewCellItem new];
-        item.name = @"列表试图-Tableview";
-        item.viewController = @"TableviewVC";
+        item.name = @"tableview-倒计时";
+        item.viewController = @"TableviewTimerCellDemo";
         [arr addObject:item];
         _data = [arr copy];
     }

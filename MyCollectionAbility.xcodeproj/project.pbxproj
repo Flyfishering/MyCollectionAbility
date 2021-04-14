@@ -71,6 +71,9 @@
 		185183562626BD0A009389BE /* NomalTableviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185183552626BD0A009389BE /* NomalTableviewVC.m */; };
 		1851835C2626C0DD009389BE /* TableviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851835B2626C0DD009389BE /* TableviewVC.m */; };
 		185183622626C1AA009389BE /* FoundationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185183612626C1AA009389BE /* FoundationVC.m */; };
+		185183682626C412009389BE /* BBTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 185183672626C412009389BE /* BBTimer.m */; };
+		1851836E2626C798009389BE /* TableviewTimerCellDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851836D2626C798009389BE /* TableviewTimerCellDemo.m */; };
+		185183742626C7F9009389BE /* TBTimerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185183732626C7F8009389BE /* TBTimerCell.m */; };
 		403EBFC92252550A003E2309 /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 403EBFC82252550A003E2309 /* UIButton+EnlargeTouchArea.m */; };
 		404EF97E22B53B5D004F4784 /* LayoutSubviewDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404EF97D22B53B5D004F4784 /* LayoutSubviewDemoVC.swift */; };
 		406A5852204EE11400D5EA5C /* SingleInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A5851204EE11400D5EA5C /* SingleInstance.m */; };
@@ -249,6 +252,12 @@
 		1851835B2626C0DD009389BE /* TableviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableviewVC.m; sourceTree = "<group>"; };
 		185183602626C1AA009389BE /* FoundationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationVC.h; sourceTree = "<group>"; };
 		185183612626C1AA009389BE /* FoundationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationVC.m; sourceTree = "<group>"; };
+		185183662626C412009389BE /* BBTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBTimer.h; sourceTree = "<group>"; };
+		185183672626C412009389BE /* BBTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBTimer.m; sourceTree = "<group>"; };
+		1851836C2626C798009389BE /* TableviewTimerCellDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableviewTimerCellDemo.h; sourceTree = "<group>"; };
+		1851836D2626C798009389BE /* TableviewTimerCellDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableviewTimerCellDemo.m; sourceTree = "<group>"; };
+		185183722626C7F8009389BE /* TBTimerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBTimerCell.h; sourceTree = "<group>"; };
+		185183732626C7F8009389BE /* TBTimerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBTimerCell.m; sourceTree = "<group>"; };
 		1D431651E4932E932FB81ACA /* libPods-MyCollectionAbility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCollectionAbility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4019A7E022B91B5E0077E673 /* LayoutSubviewsDemo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LayoutSubviewsDemo.md; sourceTree = "<group>"; };
 		403EBFC72252550A003E2309 /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
@@ -631,6 +640,8 @@
 			children = (
 				0464F4391E090992008CA1B3 /* NSDictionary+XHLogHelper.h */,
 				0464F43A1E090992008CA1B3 /* NSDictionary+XHLogHelper.m */,
+				185183662626C412009389BE /* BBTimer.h */,
+				185183672626C412009389BE /* BBTimer.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -891,8 +902,8 @@
 		18518338262697CB009389BE /* UITableview */ = {
 			isa = PBXGroup;
 			children = (
-				1851835A2626C0DD009389BE /* TableviewVC.h */,
-				1851835B2626C0DD009389BE /* TableviewVC.m */,
+				185183792626DC74009389BE /* Net */,
+				185183782626DC5C009389BE /* Timer */,
 			);
 			path = UITableview;
 			sourceTree = "<group>";
@@ -910,6 +921,26 @@
 				1851834626269D8C009389BE /* TableviewCellItem.m */,
 			);
 			path = TableViewComponent;
+			sourceTree = "<group>";
+		};
+		185183782626DC5C009389BE /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				1851835A2626C0DD009389BE /* TableviewVC.h */,
+				1851835B2626C0DD009389BE /* TableviewVC.m */,
+				1851836C2626C798009389BE /* TableviewTimerCellDemo.h */,
+				1851836D2626C798009389BE /* TableviewTimerCellDemo.m */,
+				185183722626C7F8009389BE /* TBTimerCell.h */,
+				185183732626C7F8009389BE /* TBTimerCell.m */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		185183792626DC74009389BE /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Net;
 			sourceTree = "<group>";
 		};
 		403EBFC6225254D1003E2309 /* Category */ = {
@@ -1257,6 +1288,7 @@
 				0434E4DC1E01319300F8E86C /* KVO_Observer.m in Sources */,
 				04FAD7A11E6A6F4B00139FDD /* SingelAndBlockSecondObject.m in Sources */,
 				1851835C2626C0DD009389BE /* TableviewVC.m in Sources */,
+				1851836E2626C798009389BE /* TableviewTimerCellDemo.m in Sources */,
 				0464F43B1E090992008CA1B3 /* NSDictionary+XHLogHelper.m in Sources */,
 				B72642E520B3C98F00C2C71C /* UndoViewController.m in Sources */,
 				045780E41E03897400783CAB /* APLProduct.m in Sources */,
@@ -1281,6 +1313,7 @@
 				406A585E204EECE800D5EA5C /* SingleInstance3.m in Sources */,
 				044879631E9E11BB009A678F /* StatusResult.m in Sources */,
 				404EF97E22B53B5D004F4784 /* LayoutSubviewDemoVC.swift in Sources */,
+				185183682626C412009389BE /* BBTimer.m in Sources */,
 				40F076E6205BB5F500601E48 /* KVCGetSetObject.m in Sources */,
 				1816C99225EE20FD00CBD587 /* OtherObj.m in Sources */,
 				F14C4F6E2237B2E600D62D04 /* KVO_Department.m in Sources */,
@@ -1301,6 +1334,7 @@
 				045780DE1E02311A00783CAB /* KVO_TargetWrapper.m in Sources */,
 				0435CA021DE540E200A9F1CF /* HomeTabelViewDelegateObj.m in Sources */,
 				1851833C26269AC1009389BE /* TableViewNormalComponent.m in Sources */,
+				185183742626C7F9009389BE /* TBTimerCell.m in Sources */,
 				044879661E9E1D30009A678F /* Student.m in Sources */,
 				04708F611E4EACC500A39857 /* ConformsToProtocolViewController.m in Sources */,
 				406C3F2E2052BCE500207356 /* WeakObjectViewController.m in Sources */,
