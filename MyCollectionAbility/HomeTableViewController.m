@@ -27,14 +27,13 @@
 #import "TableViewComponent.h"
 
 
-@interface HomeTableViewController ()<TableViewComponentProtocl>
+@interface HomeTableViewController ()
+{
+    NSArray<TableviewCellItem *> *_data;
+}
 
 @property (nonatomic, strong) NSArray *titleArr;
 @property (nonatomic, strong) NSArray *viewControllers;
-/// tabview 组件
-@property(nonatomic, strong) TableViewNormalComponent *tableviewComponent;
-@property(nonatomic, strong) NSArray<TableviewCellItem *> *data;
-
 @end
 
 
@@ -43,35 +42,7 @@
 
 #pragma mark - life cycle
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self.tableviewComponent configTableView];
-}
-
-//MARK: - TableViewComponentProtocl
-
-- (UIViewController *)viewController
-{
-    return self;
-}
-
-- (NSArray<TableviewCellItem *> *)dataSource
-{
-    return self.data;
-}
-
 //MARK: - get
-
-- (TableViewNormalComponent *)tableviewComponent
-{
-    if (!_tableviewComponent) {
-        _tableviewComponent = [TableViewNormalComponent new];
-        _tableviewComponent.delegate = self;
-    }
-    return _tableviewComponent;
-}
-
 
 - (NSArray<TableviewCellItem *> *)data
 {
@@ -89,7 +60,10 @@
 }
 
 - (NSArray *)viewControllers{
-    return @[@"AboutNSUserDefualtViewController",
+    return @[
+        @"UIKitVC",
+        @"FoundationVC",
+        @"AboutNSUserDefualtViewController",
              @"NSKeyedArichiverViewController",
              @"FileManagerViewController",
              @"EnumerateObjectsViewController",
@@ -108,11 +82,14 @@
              @"UndoViewController",
              @"LayoutSubviewDemoVC",
              @"OtherViewController",
-            @"CollectionVC",];
+            ];
 }
 //#import "NotificationViewController.h"
 - (NSArray *)titleArr{
-    return @[@"01--NSUserDefaults 保存对象",
+    return @[
+        @"UIKit",
+        @"Foundation",
+        @"01--NSUserDefaults 保存对象",
              @"02--归档",
              @"03--文件管理",
              @"04--遍历数组字典的几种方法",
@@ -131,7 +108,7 @@
              @"17-- Undo 撤销 和 重做",
              @"18-- view 的 layoutSubviews 方法",
              @"19-- 其他",
-             @"集合-collection"];
+             ];
 }
 
 @end

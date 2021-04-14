@@ -1,8 +1,8 @@
 //
-//  CollectionVC.h
+//  UIKitVC.h
 //  MyCollectionAbility
 //
-//  Created by Apple on 2021/4/13.
+//  Created by Apple on 2021/4/14.
 //  Copyright © 2021 mac. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CollectionVC : NomalTableviewVC
+@interface UIKitVC : NomalTableviewVC
 
 @end
 

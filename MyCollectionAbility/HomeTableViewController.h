@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NomalTableviewVC.h"
 
 
-@interface HomeTableViewController : UIViewController
+@interface HomeTableViewController : NomalTableviewVC
 
 @end
