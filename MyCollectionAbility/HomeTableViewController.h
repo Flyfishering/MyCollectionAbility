@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface HomeTableViewController : UITableViewController
+@interface HomeTableViewController : UIViewController
 
 @end

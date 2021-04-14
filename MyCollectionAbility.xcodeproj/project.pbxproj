@@ -60,6 +60,13 @@
 		04FAD79B1E6A6DCF00139FDD /* SingelAndBlockSingel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD79A1E6A6DCF00139FDD /* SingelAndBlockSingel.m */; };
 		04FAD79E1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD79D1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m */; };
 		04FAD7A11E6A6F4B00139FDD /* SingelAndBlockSecondObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD7A01E6A6F4B00139FDD /* SingelAndBlockSecondObject.m */; };
+		1816C98925EE205F00CBD587 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C98825EE205F00CBD587 /* OtherViewController.m */; };
+		1816C99225EE20FD00CBD587 /* OtherObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C99125EE20FD00CBD587 /* OtherObj.m */; };
+		1816C99825EE213A00CBD587 /* OtherDelegateObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C99725EE213A00CBD587 /* OtherDelegateObj.m */; };
+		1851830326254665009389BE /* DictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851830226254665009389BE /* DictionaryViewController.m */; };
+		1851830C2625469B009389BE /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851830B2625469B009389BE /* CollectionVC.m */; };
+		1851833C26269AC1009389BE /* TableViewNormalComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851833B26269AC1009389BE /* TableViewNormalComponent.m */; };
+		1851834726269D8C009389BE /* TableviewCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851834626269D8C009389BE /* TableviewCellItem.m */; };
 		403EBFC92252550A003E2309 /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 403EBFC82252550A003E2309 /* UIButton+EnlargeTouchArea.m */; };
 		404EF97E22B53B5D004F4784 /* LayoutSubviewDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404EF97D22B53B5D004F4784 /* LayoutSubviewDemoVC.swift */; };
 		406A5852204EE11400D5EA5C /* SingleInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A5851204EE11400D5EA5C /* SingleInstance.m */; };
@@ -214,6 +221,22 @@
 		04FAD79D1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingelAndBlockFirstObjct.m; sourceTree = "<group>"; };
 		04FAD79F1E6A6F4B00139FDD /* SingelAndBlockSecondObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingelAndBlockSecondObject.h; sourceTree = "<group>"; };
 		04FAD7A01E6A6F4B00139FDD /* SingelAndBlockSecondObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingelAndBlockSecondObject.m; sourceTree = "<group>"; };
+		1816C98725EE205F00CBD587 /* OtherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
+		1816C98825EE205F00CBD587 /* OtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
+		1816C99025EE20FD00CBD587 /* OtherObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherObj.h; sourceTree = "<group>"; };
+		1816C99125EE20FD00CBD587 /* OtherObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherObj.m; sourceTree = "<group>"; };
+		1816C99625EE213A00CBD587 /* OtherDelegateObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherDelegateObj.h; sourceTree = "<group>"; };
+		1816C99725EE213A00CBD587 /* OtherDelegateObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherDelegateObj.m; sourceTree = "<group>"; };
+		1851830126254665009389BE /* DictionaryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryViewController.h; sourceTree = "<group>"; };
+		1851830226254665009389BE /* DictionaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryViewController.m; sourceTree = "<group>"; };
+		1851830A2625469B009389BE /* CollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionVC.h; sourceTree = "<group>"; };
+		1851830B2625469B009389BE /* CollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionVC.m; sourceTree = "<group>"; };
+		1851833A26269AC1009389BE /* TableViewNormalComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewNormalComponent.h; sourceTree = "<group>"; };
+		1851833B26269AC1009389BE /* TableViewNormalComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewNormalComponent.m; sourceTree = "<group>"; };
+		1851834326269AEC009389BE /* TableViewComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewComponent.h; sourceTree = "<group>"; };
+		1851834426269B34009389BE /* TableViewComponentProtocl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewComponentProtocl.h; sourceTree = "<group>"; };
+		1851834526269D8C009389BE /* TableviewCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableviewCellItem.h; sourceTree = "<group>"; };
+		1851834626269D8C009389BE /* TableviewCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableviewCellItem.m; sourceTree = "<group>"; };
 		1D431651E4932E932FB81ACA /* libPods-MyCollectionAbility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCollectionAbility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4019A7E022B91B5E0077E673 /* LayoutSubviewsDemo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LayoutSubviewsDemo.md; sourceTree = "<group>"; };
 		403EBFC72252550A003E2309 /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
@@ -344,6 +367,9 @@
 		0407AC861DE53C7700412ECA /* MyCollectionAbility */ = {
 			isa = PBXGroup;
 			children = (
+				18518337262697CB009389BE /* UIKit */,
+				185182FE2625462F009389BE /* Foundation */,
+				1816C98625EE203E00CBD587 /* Other */,
 				404EF97B22B53B25004F4784 /* LayoutSubviewsDemo */,
 				403EBFC6225254D1003E2309 /* Category */,
 				B72642E120B3C97700C2C71C /* Undo */,
@@ -372,12 +398,11 @@
 				0407AC951DE53C7700412ECA /* LaunchScreen.storyboard */,
 				0407AC981DE53C7700412ECA /* Info.plist */,
 				0407AC871DE53C7700412ECA /* Supporting Files */,
-				0407ACBA1DE53DE300412ECA /* HomeTableView.h */,
-				0407ACBB1DE53DE300412ECA /* HomeTableView.m */,
 				0435CA001DE540E200A9F1CF /* HomeTabelViewDelegateObj.h */,
 				0435CA011DE540E200A9F1CF /* HomeTabelViewDelegateObj.m */,
 				0435CA091DE546D300A9F1CF /* HomeTableViewController.h */,
 				0435CA0A1DE546D300A9F1CF /* HomeTableViewController.m */,
+				18518339262699DB009389BE /* TableViewComponent */,
 			);
 			path = MyCollectionAbility;
 			sourceTree = "<group>";
@@ -797,6 +822,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1816C98625EE203E00CBD587 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1816C98725EE205F00CBD587 /* OtherViewController.h */,
+				1816C98825EE205F00CBD587 /* OtherViewController.m */,
+				1816C99025EE20FD00CBD587 /* OtherObj.h */,
+				1816C99125EE20FD00CBD587 /* OtherObj.m */,
+				1816C99625EE213A00CBD587 /* OtherDelegateObj.h */,
+				1816C99725EE213A00CBD587 /* OtherDelegateObj.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		185182FE2625462F009389BE /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				185182FF2625462F009389BE /* Collection */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		185182FF2625462F009389BE /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				185183002625462F009389BE /* Dictionary */,
+				1851830A2625469B009389BE /* CollectionVC.h */,
+				1851830B2625469B009389BE /* CollectionVC.m */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		185183002625462F009389BE /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				1851830126254665009389BE /* DictionaryViewController.h */,
+				1851830226254665009389BE /* DictionaryViewController.m */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		18518337262697CB009389BE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				18518338262697CB009389BE /* UITableview */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		18518338262697CB009389BE /* UITableview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITableview;
+			sourceTree = "<group>";
+		};
+		18518339262699DB009389BE /* TableViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				1851834326269AEC009389BE /* TableViewComponent.h */,
+				1851834426269B34009389BE /* TableViewComponentProtocl.h */,
+				0407ACBA1DE53DE300412ECA /* HomeTableView.h */,
+				0407ACBB1DE53DE300412ECA /* HomeTableView.m */,
+				1851833A26269AC1009389BE /* TableViewNormalComponent.h */,
+				1851833B26269AC1009389BE /* TableViewNormalComponent.m */,
+				1851834526269D8C009389BE /* TableviewCellItem.h */,
+				1851834626269D8C009389BE /* TableviewCellItem.m */,
+			);
+			path = TableViewComponent;
+			sourceTree = "<group>";
+		};
 		403EBFC6225254D1003E2309 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -935,8 +1030,6 @@
 				0407AC801DE53C7700412ECA /* Sources */,
 				0407AC811DE53C7700412ECA /* Frameworks */,
 				0407AC821DE53C7700412ECA /* Resources */,
-				2A2FE512ACEF28A0AAEB6F02 /* [CP] Embed Pods Frameworks */,
-				D2C72750F4CC4E2B779E0158 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -955,8 +1048,6 @@
 				0407AC991DE53C7700412ECA /* Sources */,
 				0407AC9A1DE53C7700412ECA /* Frameworks */,
 				0407AC9B1DE53C7700412ECA /* Resources */,
-				E15D9AA34F61B9DE1EE02635 /* [CP] Embed Pods Frameworks */,
-				7EA506BB809195D5C959F335 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -976,7 +1067,6 @@
 				0407ACA41DE53C7700412ECA /* Sources */,
 				0407ACA51DE53C7700412ECA /* Frameworks */,
 				0407ACA61DE53C7700412ECA /* Resources */,
-				7AF7050894DDB35FCAA5338B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1080,58 +1170,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyCollectionAbilityTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2A2FE512ACEF28A0AAEB6F02 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCollectionAbility/Pods-MyCollectionAbility-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7AF7050894DDB35FCAA5338B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCollectionAbilityUITests/Pods-MyCollectionAbilityUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7EA506BB809195D5C959F335 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCollectionAbilityTests/Pods-MyCollectionAbilityTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C46A3828A30A059514EABF39 /* [CP] Check Pods Manifest.lock */ = {
@@ -1140,13 +1188,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyCollectionAbility-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C7DD6D1A83D2F76447DF5FFA /* [CP] Check Pods Manifest.lock */ = {
@@ -1155,43 +1206,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyCollectionAbilityUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D2C72750F4CC4E2B779E0158 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCollectionAbility/Pods-MyCollectionAbility-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E15D9AA34F61B9DE1EE02635 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCollectionAbilityTests/Pods-MyCollectionAbilityTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1226,6 +1250,7 @@
 				0458A2E51DED25AB009F5D10 /* EnumerateObjects.m in Sources */,
 				04708F5B1E4EAB3100A39857 /* ConformsToProtocolFather.m in Sources */,
 				B7160A8420A6A8D6004E2BB9 /* XibDemoTableViewController.m in Sources */,
+				1816C99825EE213A00CBD587 /* OtherDelegateObj.m in Sources */,
 				40F076E2205A1D0500601E48 /* KVCValidatingObject.m in Sources */,
 				B7160A8F20A6BFD7004E2BB9 /* XIB_CustomButton.m in Sources */,
 				F14C4F62223685AB00D62D04 /* KVO_ManualChangeNotification.m in Sources */,
@@ -1234,6 +1259,7 @@
 				044879631E9E11BB009A678F /* StatusResult.m in Sources */,
 				404EF97E22B53B5D004F4784 /* LayoutSubviewDemoVC.swift in Sources */,
 				40F076E6205BB5F500601E48 /* KVCGetSetObject.m in Sources */,
+				1816C99225EE20FD00CBD587 /* OtherObj.m in Sources */,
 				F14C4F6E2237B2E600D62D04 /* KVO_Department.m in Sources */,
 				B72642E020B278FC00C2C71C /* InvocationObject.m in Sources */,
 				046A896F1DE7C99000EC4F1D /* FileManagerObject.m in Sources */,
@@ -1246,21 +1272,26 @@
 				0434E4D81E01316300F8E86C /* KVOViewController.m in Sources */,
 				409F3F272058BE1900F24CB3 /* KVCTransaction.m in Sources */,
 				406A5855204EE15000D5EA5C /* SingleObject.m in Sources */,
+				1851830326254665009389BE /* DictionaryViewController.m in Sources */,
 				409F3F2A2058BFE900F24CB3 /* KVCAddress.m in Sources */,
 				F14C4F6B2237AFC500D62D04 /* KVO_Employees.m in Sources */,
 				045780DE1E02311A00783CAB /* KVO_TargetWrapper.m in Sources */,
 				0435CA021DE540E200A9F1CF /* HomeTabelViewDelegateObj.m in Sources */,
+				1851833C26269AC1009389BE /* TableViewNormalComponent.m in Sources */,
 				044879661E9E1D30009A678F /* Student.m in Sources */,
 				04708F611E4EACC500A39857 /* ConformsToProtocolViewController.m in Sources */,
 				406C3F2E2052BCE500207356 /* WeakObjectViewController.m in Sources */,
 				04FAD7981E6A6D5000139FDD /* SingelAndBlockViewController.m in Sources */,
 				40F076DF205A136C00601E48 /* KVCNonObjectValues.m in Sources */,
 				04FAD79B1E6A6DCF00139FDD /* SingelAndBlockSingel.m in Sources */,
+				1851830C2625469B009389BE /* CollectionVC.m in Sources */,
 				406C3F312052BD0700207356 /* WeakObject.m in Sources */,
 				0407AC891DE53C7700412ECA /* main.m in Sources */,
+				1816C98925EE205F00CBD587 /* OtherViewController.m in Sources */,
 				409F3F242058BDF500F24CB3 /* KVCPerson.m in Sources */,
 				044879501E9DD559009A678F /* MJExtensionLearnViewController.m in Sources */,
 				B7160A8820A6BF43004E2BB9 /* XIB_ObjectViewController.m in Sources */,
+				1851834726269D8C009389BE /* TableviewCellItem.m in Sources */,
 				0461EA2A1E0B75BD001B8AFD /* NSCharacterSetViewController.m in Sources */,
 				046A89621DE7308200EC4F1D /* NSKeyedArichiverViewController.m in Sources */,
 				04FAD79E1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m in Sources */,

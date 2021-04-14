@@ -8,16 +8,6 @@
 
 
 
-//设计思路，此项目采用UIStoryboard 来初始化，首页是一个UITableViewController xib文件
-//        自定义一个HomeTableView.h(UITableView),和UITableViewController xib 中的tableView相互关联，
-//        自定义一个HomeTableViewController.h(UITableViewController)和UITableViewController xib 关联
-//
-//同时，这里对控制器进行瘦身，把tableview 的代理方法delegate method 提取出来，放到了HomeTabelViewDelegateObj.h 中，
-//    在HomeTabelViewDelegateObj.h 中执行UITableView的代理方法，并将点击方法回调到控制器中
-
-
-
-
 #import "HomeTableViewController.h"
 #import "HomeTableView.h"
 #import "HomeTabelViewDelegateObj.h"
@@ -34,11 +24,16 @@
 #import "UndoViewController.h"
 //#import "LayoutSubviewDemoVC.h"
 #import "MyCollectionAbility-Swift.h"
-@interface HomeTableViewController ()
+#import "TableViewComponent.h"
 
-@property (nonatomic, strong) HomeTabelViewDelegateObj *tableViewDelegateObj;
+
+@interface HomeTableViewController ()<TableViewComponentProtocl>
+
 @property (nonatomic, strong) NSArray *titleArr;
 @property (nonatomic, strong) NSArray *viewControllers;
+/// tabview 组件
+@property(nonatomic, strong) TableViewNormalComponent *tableviewComponent;
+@property(nonatomic, strong) NSArray<TableviewCellItem *> *data;
 
 @end
 
@@ -46,36 +41,52 @@
 
 @implementation HomeTableViewController
 
-/*  
-     这里需要注意下，self.tableview 系统默认为 HomeTableView
- 
- */
-
 #pragma mark - life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.delegate = self.tableViewDelegateObj;
-    self.tableView.dataSource = self.tableViewDelegateObj;
-    
+    [self.tableviewComponent configTableView];
 }
 
+//MARK: - TableViewComponentProtocl
 
-#pragma mark target method 
-- (void)taleviewObjSelectAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSLog(@"%s",__func__);
-    UIViewController *viewController = [NSClassFromString(self.viewControllers[indexPath.row]) new] ;
-    if (indexPath.row == 17) {
-        viewController = [[LayoutSubviewDemoVC alloc] init];
-        
+- (UIViewController *)viewController
+{
+    return self;
+}
+
+- (NSArray<TableviewCellItem *> *)dataSource
+{
+    return self.data;
+}
+
+//MARK: - get
+
+- (TableViewNormalComponent *)tableviewComponent
+{
+    if (!_tableviewComponent) {
+        _tableviewComponent = [TableViewNormalComponent new];
+        _tableviewComponent.delegate = self;
     }
-    [self.navigationController pushViewController:viewController animated:YES];
+    return _tableviewComponent;
 }
 
 
-#pragma amrk - lazy method
+- (NSArray<TableviewCellItem *> *)data
+{
+    if (!_data) {
+        NSMutableArray *arr = [@[] mutableCopy];
+        for (NSInteger i = 0; i < self.viewControllers.count; i++) {
+            TableviewCellItem *item = [TableviewCellItem new];
+            item.name = self.titleArr[i];;
+            item.viewController = self.viewControllers[i];
+            [arr addObject:item];
+        }
+        _data = [arr copy];
+    }
+    return _data;
+}
 
 - (NSArray *)viewControllers{
     return @[@"AboutNSUserDefualtViewController",
@@ -95,7 +106,9 @@
              @"RunTimeViewController",
              @"XibDemoTableViewController",
              @"UndoViewController",
-             @"LayoutSubviewDemoVC"];
+             @"LayoutSubviewDemoVC",
+             @"OtherViewController",
+            @"CollectionVC",];
 }
 //#import "NotificationViewController.h"
 - (NSArray *)titleArr{
@@ -116,29 +129,9 @@
              @"15--runtime",
              @"16--xib 相关",
              @"17-- Undo 撤销 和 重做",
-             @"18-- view 的 layoutSubviews 方法"];
+             @"18-- view 的 layoutSubviews 方法",
+             @"19-- 其他",
+             @"集合-collection"];
 }
-- (HomeTabelViewDelegateObj *)tableViewDelegateObj{
-    if (!_tableViewDelegateObj) {
-        __weak typeof(self) weakSelf = self;
-        _tableViewDelegateObj = [HomeTabelViewDelegateObj createTableViewDelegateWithDataList:self.titleArr selectBlock:^(NSIndexPath *indexPath) {
-            
-            [weakSelf taleviewObjSelectAtIndexPath:indexPath];
-        }];
-    }
-    return _tableViewDelegateObj;
-}
-
-- (void)viewDidLayoutSubviews{
-
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-
 
 @end
