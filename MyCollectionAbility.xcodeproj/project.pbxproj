@@ -74,6 +74,9 @@
 		185183682626C412009389BE /* BBTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 185183672626C412009389BE /* BBTimer.m */; };
 		1851836E2626C798009389BE /* TableviewTimerCellDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851836D2626C798009389BE /* TableviewTimerCellDemo.m */; };
 		185183742626C7F9009389BE /* TBTimerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185183732626C7F8009389BE /* TBTimerCell.m */; };
+		1851837C2626DCED009389BE /* TBNetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851837B2626DCED009389BE /* TBNetVC.m */; };
+		185183852626DD4F009389BE /* TBNetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185183842626DD4F009389BE /* TBNetCell.m */; };
+		1851838B2626DF58009389BE /* TBNetHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851838A2626DF58009389BE /* TBNetHandle.m */; };
 		403EBFC92252550A003E2309 /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 403EBFC82252550A003E2309 /* UIButton+EnlargeTouchArea.m */; };
 		404EF97E22B53B5D004F4784 /* LayoutSubviewDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404EF97D22B53B5D004F4784 /* LayoutSubviewDemoVC.swift */; };
 		406A5852204EE11400D5EA5C /* SingleInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A5851204EE11400D5EA5C /* SingleInstance.m */; };
@@ -258,6 +261,12 @@
 		1851836D2626C798009389BE /* TableviewTimerCellDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableviewTimerCellDemo.m; sourceTree = "<group>"; };
 		185183722626C7F8009389BE /* TBTimerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBTimerCell.h; sourceTree = "<group>"; };
 		185183732626C7F8009389BE /* TBTimerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBTimerCell.m; sourceTree = "<group>"; };
+		1851837A2626DCED009389BE /* TBNetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNetVC.h; sourceTree = "<group>"; };
+		1851837B2626DCED009389BE /* TBNetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBNetVC.m; sourceTree = "<group>"; };
+		185183832626DD4F009389BE /* TBNetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNetCell.h; sourceTree = "<group>"; };
+		185183842626DD4F009389BE /* TBNetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBNetCell.m; sourceTree = "<group>"; };
+		185183892626DF58009389BE /* TBNetHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNetHandle.h; sourceTree = "<group>"; };
+		1851838A2626DF58009389BE /* TBNetHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBNetHandle.m; sourceTree = "<group>"; };
 		1D431651E4932E932FB81ACA /* libPods-MyCollectionAbility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCollectionAbility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4019A7E022B91B5E0077E673 /* LayoutSubviewsDemo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LayoutSubviewsDemo.md; sourceTree = "<group>"; };
 		403EBFC72252550A003E2309 /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
@@ -902,6 +911,8 @@
 		18518338262697CB009389BE /* UITableview */ = {
 			isa = PBXGroup;
 			children = (
+				1851835A2626C0DD009389BE /* TableviewVC.h */,
+				1851835B2626C0DD009389BE /* TableviewVC.m */,
 				185183792626DC74009389BE /* Net */,
 				185183782626DC5C009389BE /* Timer */,
 			);
@@ -926,8 +937,6 @@
 		185183782626DC5C009389BE /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				1851835A2626C0DD009389BE /* TableviewVC.h */,
-				1851835B2626C0DD009389BE /* TableviewVC.m */,
 				1851836C2626C798009389BE /* TableviewTimerCellDemo.h */,
 				1851836D2626C798009389BE /* TableviewTimerCellDemo.m */,
 				185183722626C7F8009389BE /* TBTimerCell.h */,
@@ -939,6 +948,12 @@
 		185183792626DC74009389BE /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				1851837A2626DCED009389BE /* TBNetVC.h */,
+				1851837B2626DCED009389BE /* TBNetVC.m */,
+				185183832626DD4F009389BE /* TBNetCell.h */,
+				185183842626DD4F009389BE /* TBNetCell.m */,
+				185183892626DF58009389BE /* TBNetHandle.h */,
+				1851838A2626DF58009389BE /* TBNetHandle.m */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -1302,7 +1317,9 @@
 				0434E4C91E00ECBE00F8E86C /* DelegateInheritanceVC.m in Sources */,
 				0458A2E11DED226A009F5D10 /* EnumerateObjectsViewController.m in Sources */,
 				0458A2E51DED25AB009F5D10 /* EnumerateObjects.m in Sources */,
+				1851837C2626DCED009389BE /* TBNetVC.m in Sources */,
 				04708F5B1E4EAB3100A39857 /* ConformsToProtocolFather.m in Sources */,
+				185183852626DD4F009389BE /* TBNetCell.m in Sources */,
 				B7160A8420A6A8D6004E2BB9 /* XibDemoTableViewController.m in Sources */,
 				1816C99825EE213A00CBD587 /* OtherDelegateObj.m in Sources */,
 				40F076E2205A1D0500601E48 /* KVCValidatingObject.m in Sources */,
@@ -1331,6 +1348,7 @@
 				1851830326254665009389BE /* DictionaryViewController.m in Sources */,
 				409F3F2A2058BFE900F24CB3 /* KVCAddress.m in Sources */,
 				F14C4F6B2237AFC500D62D04 /* KVO_Employees.m in Sources */,
+				1851838B2626DF58009389BE /* TBNetHandle.m in Sources */,
 				045780DE1E02311A00783CAB /* KVO_TargetWrapper.m in Sources */,
 				0435CA021DE540E200A9F1CF /* HomeTabelViewDelegateObj.m in Sources */,
 				1851833C26269AC1009389BE /* TableViewNormalComponent.m in Sources */,

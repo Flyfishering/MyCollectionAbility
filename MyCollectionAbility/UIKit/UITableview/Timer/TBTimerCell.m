@@ -72,7 +72,7 @@
 
 - (void)configWithData:(TBTimerCellModel *)model
 {
-    
+    // 这行代码避免 cell 复用带来问题
     [self.timer cancel];
 
     
