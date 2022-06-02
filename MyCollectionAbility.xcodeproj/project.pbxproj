@@ -77,6 +77,12 @@
 		1851837C2626DCED009389BE /* TBNetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851837B2626DCED009389BE /* TBNetVC.m */; };
 		185183852626DD4F009389BE /* TBNetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185183842626DD4F009389BE /* TBNetCell.m */; };
 		1851838B2626DF58009389BE /* TBNetHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851838A2626DF58009389BE /* TBNetHandle.m */; };
+		1895D49B282D48BC00254622 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D49A282D48BC00254622 /* main.m */; };
+		1895D4A1282D48D600254622 /* MoneyObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4A0282D48D600254622 /* MoneyObj.m */; };
+		1895D4BC2835DF6500254622 /* NSPredicateDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4BB2835DF6500254622 /* NSPredicateDemo.m */; };
+		1895D4BF2835E1A000254622 /* PrePersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4BE2835E1A000254622 /* PrePersonModel.m */; };
+		1895D4D52848528800254622 /* NSObject+swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4D42848528800254622 /* NSObject+swizzling.m */; };
+		1895D4D8284852AE00254622 /* MethodSwizzlingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4D7284852AE00254622 /* MethodSwizzlingDemo.m */; };
 		403EBFC92252550A003E2309 /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 403EBFC82252550A003E2309 /* UIButton+EnlargeTouchArea.m */; };
 		404EF97E22B53B5D004F4784 /* LayoutSubviewDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404EF97D22B53B5D004F4784 /* LayoutSubviewDemoVC.swift */; };
 		406A5852204EE11400D5EA5C /* SingleInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A5851204EE11400D5EA5C /* SingleInstance.m */; };
@@ -130,6 +136,18 @@
 			remoteInfo = MyCollectionAbility;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1895D496282D48BC00254622 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0370ACF5B0B8C55495A29712 /* libPods-MyCollectionAbilityUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCollectionAbilityUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +285,18 @@
 		185183842626DD4F009389BE /* TBNetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBNetCell.m; sourceTree = "<group>"; };
 		185183892626DF58009389BE /* TBNetHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNetHandle.h; sourceTree = "<group>"; };
 		1851838A2626DF58009389BE /* TBNetHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBNetHandle.m; sourceTree = "<group>"; };
+		1895D498282D48BC00254622 /* MyCollection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyCollection; sourceTree = BUILT_PRODUCTS_DIR; };
+		1895D49A282D48BC00254622 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1895D49F282D48D600254622 /* MoneyObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyObj.h; sourceTree = "<group>"; };
+		1895D4A0282D48D600254622 /* MoneyObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyObj.m; sourceTree = "<group>"; };
+		1895D4BA2835DF6500254622 /* NSPredicateDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPredicateDemo.h; sourceTree = "<group>"; };
+		1895D4BB2835DF6500254622 /* NSPredicateDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSPredicateDemo.m; sourceTree = "<group>"; };
+		1895D4BD2835E1A000254622 /* PrePersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrePersonModel.h; sourceTree = "<group>"; };
+		1895D4BE2835E1A000254622 /* PrePersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrePersonModel.m; sourceTree = "<group>"; };
+		1895D4D32848528800254622 /* NSObject+swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+swizzling.h"; sourceTree = "<group>"; };
+		1895D4D42848528800254622 /* NSObject+swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+swizzling.m"; sourceTree = "<group>"; };
+		1895D4D6284852AE00254622 /* MethodSwizzlingDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodSwizzlingDemo.h; sourceTree = "<group>"; };
+		1895D4D7284852AE00254622 /* MethodSwizzlingDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzlingDemo.m; sourceTree = "<group>"; };
 		1D431651E4932E932FB81ACA /* libPods-MyCollectionAbility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCollectionAbility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4019A7E022B91B5E0077E673 /* LayoutSubviewsDemo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LayoutSubviewsDemo.md; sourceTree = "<group>"; };
 		403EBFC72252550A003E2309 /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
@@ -369,6 +399,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1895D495282D48BC00254622 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -378,6 +415,7 @@
 				0407AC861DE53C7700412ECA /* MyCollectionAbility */,
 				0407ACA01DE53C7700412ECA /* MyCollectionAbilityTests */,
 				0407ACAB1DE53C7700412ECA /* MyCollectionAbilityUITests */,
+				1895D499282D48BC00254622 /* MyCollection */,
 				0407AC851DE53C7700412ECA /* Products */,
 				9139E341BFCE60E881E12C8F /* Pods */,
 				1200319B130552211A9558CE /* Frameworks */,
@@ -390,6 +428,7 @@
 				0407AC841DE53C7700412ECA /* MyCollectionAbility.app */,
 				0407AC9D1DE53C7700412ECA /* MyCollectionAbilityTests.xctest */,
 				0407ACA81DE53C7700412ECA /* MyCollectionAbilityUITests.xctest */,
+				1895D498282D48BC00254622 /* MyCollection */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -901,6 +940,7 @@
 		18518337262697CB009389BE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				1851838F26298240009389BE /* UIViewController */,
 				18518338262697CB009389BE /* UITableview */,
 				1851834E2626BC8A009389BE /* UIKitVC.h */,
 				1851834F2626BC8A009389BE /* UIKitVC.m */,
@@ -956,6 +996,31 @@
 				1851838A2626DF58009389BE /* TBNetHandle.m */,
 			);
 			path = Net;
+			sourceTree = "<group>";
+		};
+		1851838F26298240009389BE /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		1895D499282D48BC00254622 /* MyCollection */ = {
+			isa = PBXGroup;
+			children = (
+				1895D49A282D48BC00254622 /* main.m */,
+				1895D49F282D48D600254622 /* MoneyObj.h */,
+				1895D4A0282D48D600254622 /* MoneyObj.m */,
+				1895D4BA2835DF6500254622 /* NSPredicateDemo.h */,
+				1895D4BB2835DF6500254622 /* NSPredicateDemo.m */,
+				1895D4BD2835E1A000254622 /* PrePersonModel.h */,
+				1895D4BE2835E1A000254622 /* PrePersonModel.m */,
+				1895D4D32848528800254622 /* NSObject+swizzling.h */,
+				1895D4D42848528800254622 /* NSObject+swizzling.m */,
+				1895D4D6284852AE00254622 /* MethodSwizzlingDemo.h */,
+				1895D4D7284852AE00254622 /* MethodSwizzlingDemo.m */,
+			);
+			path = MyCollection;
 			sourceTree = "<group>";
 		};
 		403EBFC6225254D1003E2309 /* Category */ = {
@@ -1144,6 +1209,23 @@
 			productReference = 0407ACA81DE53C7700412ECA /* MyCollectionAbilityUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1895D497282D48BC00254622 /* MyCollection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1895D49E282D48BC00254622 /* Build configuration list for PBXNativeTarget "MyCollection" */;
+			buildPhases = (
+				1895D494282D48BC00254622 /* Sources */,
+				1895D495282D48BC00254622 /* Frameworks */,
+				1895D496282D48BC00254622 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyCollection;
+			productName = MyCollection;
+			productReference = 1895D498282D48BC00254622 /* MyCollection */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1171,6 +1253,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0407AC831DE53C7700412ECA;
 					};
+					1895D497282D48BC00254622 = {
+						CreatedOnToolsVersion = 12.5.1;
+						DevelopmentTeam = 2N3LY2CR7S;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 0407AC7F1DE53C7700412ECA /* Build configuration list for PBXProject "MyCollectionAbility" */;
@@ -1190,6 +1277,7 @@
 				0407AC831DE53C7700412ECA /* MyCollectionAbility */,
 				0407AC9C1DE53C7700412ECA /* MyCollectionAbilityTests */,
 				0407ACA71DE53C7700412ECA /* MyCollectionAbilityUITests */,
+				1895D497282D48BC00254622 /* MyCollection */,
 			);
 		};
 /* End PBXProject section */
@@ -1396,6 +1484,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0407ACAD1DE53C7700412ECA /* MyCollectionAbilityUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1895D494282D48BC00254622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1895D49B282D48BC00254622 /* main.m in Sources */,
+				1895D4D8284852AE00254622 /* MethodSwizzlingDemo.m in Sources */,
+				1895D4A1282D48D600254622 /* MoneyObj.m in Sources */,
+				1895D4D52848528800254622 /* NSObject+swizzling.m in Sources */,
+				1895D4BF2835E1A000254622 /* PrePersonModel.m in Sources */,
+				1895D4BC2835DF6500254622 /* NSPredicateDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1615,6 +1716,63 @@
 			};
 			name = Release;
 		};
+		1895D49C282D48BC00254622 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2N3LY2CR7S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1895D49D282D48BC00254622 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2N3LY2CR7S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1650,6 +1808,15 @@
 			buildConfigurations = (
 				0407ACB81DE53C7700412ECA /* Debug */,
 				0407ACB91DE53C7700412ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1895D49E282D48BC00254622 /* Build configuration list for PBXNativeTarget "MyCollection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1895D49C282D48BC00254622 /* Debug */,
+				1895D49D282D48BC00254622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
