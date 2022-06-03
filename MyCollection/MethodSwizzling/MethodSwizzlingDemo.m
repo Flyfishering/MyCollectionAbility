@@ -35,11 +35,11 @@
 
 - (void)test
 {
-//    [self test_methodSwizzling_1];
+    [self test_methodSwizzling_1];
 //    [self test_methodSwizzling_2];
 //    [self test_methodSwizzling_3];
 //    [self test_methodSwizzling_4];
-    [self test_methodSwizzling_5];
+//    [self test_methodSwizzling_5];
 }
 
 /// 实例方法和实例方法交换 (相同类)

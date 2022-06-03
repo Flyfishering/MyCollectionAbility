@@ -78,11 +78,14 @@
 		185183852626DD4F009389BE /* TBNetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185183842626DD4F009389BE /* TBNetCell.m */; };
 		1851838B2626DF58009389BE /* TBNetHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851838A2626DF58009389BE /* TBNetHandle.m */; };
 		1895D49B282D48BC00254622 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D49A282D48BC00254622 /* main.m */; };
-		1895D4A1282D48D600254622 /* MoneyObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4A0282D48D600254622 /* MoneyObj.m */; };
-		1895D4BC2835DF6500254622 /* NSPredicateDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4BB2835DF6500254622 /* NSPredicateDemo.m */; };
 		1895D4BF2835E1A000254622 /* PrePersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4BE2835E1A000254622 /* PrePersonModel.m */; };
-		1895D4D52848528800254622 /* NSObject+swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4D42848528800254622 /* NSObject+swizzling.m */; };
-		1895D4D8284852AE00254622 /* MethodSwizzlingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4D7284852AE00254622 /* MethodSwizzlingDemo.m */; };
+		1895D4E4284892DA00254622 /* NSPredicateDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4DA284892DA00254622 /* NSPredicateDemo.m */; };
+		1895D4E5284892DA00254622 /* MoneyObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4DD284892DA00254622 /* MoneyObj.m */; };
+		1895D4E6284892DA00254622 /* MethodSwizzlingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4E2284892DA00254622 /* MethodSwizzlingDemo.m */; };
+		1895D4E7284892DA00254622 /* NSObject+swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4E3284892DA00254622 /* NSObject+swizzling.m */; };
+		1895D4EB2848939E00254622 /* ClassClustersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4EA2848939E00254622 /* ClassClustersTest.m */; };
+		1895D4F428489D2000254622 /* SafeObjTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4F328489D2000254622 /* SafeObjTest.m */; };
+		1895D4F728489D4900254622 /* NSArray+WBBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4F628489D4900254622 /* NSArray+WBBSafe.m */; };
 		403EBFC92252550A003E2309 /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 403EBFC82252550A003E2309 /* UIButton+EnlargeTouchArea.m */; };
 		404EF97E22B53B5D004F4784 /* LayoutSubviewDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404EF97D22B53B5D004F4784 /* LayoutSubviewDemoVC.swift */; };
 		406A5852204EE11400D5EA5C /* SingleInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A5851204EE11400D5EA5C /* SingleInstance.m */; };
@@ -287,16 +290,22 @@
 		1851838A2626DF58009389BE /* TBNetHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBNetHandle.m; sourceTree = "<group>"; };
 		1895D498282D48BC00254622 /* MyCollection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyCollection; sourceTree = BUILT_PRODUCTS_DIR; };
 		1895D49A282D48BC00254622 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1895D49F282D48D600254622 /* MoneyObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyObj.h; sourceTree = "<group>"; };
-		1895D4A0282D48D600254622 /* MoneyObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyObj.m; sourceTree = "<group>"; };
-		1895D4BA2835DF6500254622 /* NSPredicateDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPredicateDemo.h; sourceTree = "<group>"; };
-		1895D4BB2835DF6500254622 /* NSPredicateDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSPredicateDemo.m; sourceTree = "<group>"; };
 		1895D4BD2835E1A000254622 /* PrePersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrePersonModel.h; sourceTree = "<group>"; };
 		1895D4BE2835E1A000254622 /* PrePersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrePersonModel.m; sourceTree = "<group>"; };
-		1895D4D32848528800254622 /* NSObject+swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+swizzling.h"; sourceTree = "<group>"; };
-		1895D4D42848528800254622 /* NSObject+swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+swizzling.m"; sourceTree = "<group>"; };
-		1895D4D6284852AE00254622 /* MethodSwizzlingDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodSwizzlingDemo.h; sourceTree = "<group>"; };
-		1895D4D7284852AE00254622 /* MethodSwizzlingDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzlingDemo.m; sourceTree = "<group>"; };
+		1895D4DA284892DA00254622 /* NSPredicateDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPredicateDemo.m; sourceTree = "<group>"; };
+		1895D4DB284892DA00254622 /* NSPredicateDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPredicateDemo.h; sourceTree = "<group>"; };
+		1895D4DD284892DA00254622 /* MoneyObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyObj.m; sourceTree = "<group>"; };
+		1895D4DE284892DA00254622 /* MoneyObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyObj.h; sourceTree = "<group>"; };
+		1895D4E0284892DA00254622 /* MethodSwizzlingDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzlingDemo.h; sourceTree = "<group>"; };
+		1895D4E1284892DA00254622 /* NSObject+swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+swizzling.h"; sourceTree = "<group>"; };
+		1895D4E2284892DA00254622 /* MethodSwizzlingDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzlingDemo.m; sourceTree = "<group>"; };
+		1895D4E3284892DA00254622 /* NSObject+swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+swizzling.m"; sourceTree = "<group>"; };
+		1895D4E92848939E00254622 /* ClassClustersTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassClustersTest.h; sourceTree = "<group>"; };
+		1895D4EA2848939E00254622 /* ClassClustersTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassClustersTest.m; sourceTree = "<group>"; };
+		1895D4F228489D2000254622 /* SafeObjTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeObjTest.h; sourceTree = "<group>"; };
+		1895D4F328489D2000254622 /* SafeObjTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeObjTest.m; sourceTree = "<group>"; };
+		1895D4F528489D4900254622 /* NSArray+WBBSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+WBBSafe.h"; sourceTree = "<group>"; };
+		1895D4F628489D4900254622 /* NSArray+WBBSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WBBSafe.m"; sourceTree = "<group>"; };
 		1D431651E4932E932FB81ACA /* libPods-MyCollectionAbility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCollectionAbility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4019A7E022B91B5E0077E673 /* LayoutSubviewsDemo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LayoutSubviewsDemo.md; sourceTree = "<group>"; };
 		403EBFC72252550A003E2309 /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
@@ -1009,18 +1018,64 @@
 			isa = PBXGroup;
 			children = (
 				1895D49A282D48BC00254622 /* main.m */,
-				1895D49F282D48D600254622 /* MoneyObj.h */,
-				1895D4A0282D48D600254622 /* MoneyObj.m */,
-				1895D4BA2835DF6500254622 /* NSPredicateDemo.h */,
-				1895D4BB2835DF6500254622 /* NSPredicateDemo.m */,
 				1895D4BD2835E1A000254622 /* PrePersonModel.h */,
 				1895D4BE2835E1A000254622 /* PrePersonModel.m */,
-				1895D4D32848528800254622 /* NSObject+swizzling.h */,
-				1895D4D42848528800254622 /* NSObject+swizzling.m */,
-				1895D4D6284852AE00254622 /* MethodSwizzlingDemo.h */,
-				1895D4D7284852AE00254622 /* MethodSwizzlingDemo.m */,
+				1895D4F128489D0700254622 /* SafeObj */,
+				1895D4E82848938B00254622 /* ClassClusters */,
+				1895D4DF284892DA00254622 /* MethodSwizzling */,
+				1895D4DC284892DA00254622 /* Money */,
+				1895D4D9284892DA00254622 /* NSPredicate */,
 			);
 			path = MyCollection;
+			sourceTree = "<group>";
+		};
+		1895D4D9284892DA00254622 /* NSPredicate */ = {
+			isa = PBXGroup;
+			children = (
+				1895D4DA284892DA00254622 /* NSPredicateDemo.m */,
+				1895D4DB284892DA00254622 /* NSPredicateDemo.h */,
+			);
+			path = NSPredicate;
+			sourceTree = "<group>";
+		};
+		1895D4DC284892DA00254622 /* Money */ = {
+			isa = PBXGroup;
+			children = (
+				1895D4DD284892DA00254622 /* MoneyObj.m */,
+				1895D4DE284892DA00254622 /* MoneyObj.h */,
+			);
+			path = Money;
+			sourceTree = "<group>";
+		};
+		1895D4DF284892DA00254622 /* MethodSwizzling */ = {
+			isa = PBXGroup;
+			children = (
+				1895D4E1284892DA00254622 /* NSObject+swizzling.h */,
+				1895D4E3284892DA00254622 /* NSObject+swizzling.m */,
+				1895D4E0284892DA00254622 /* MethodSwizzlingDemo.h */,
+				1895D4E2284892DA00254622 /* MethodSwizzlingDemo.m */,
+			);
+			path = MethodSwizzling;
+			sourceTree = "<group>";
+		};
+		1895D4E82848938B00254622 /* ClassClusters */ = {
+			isa = PBXGroup;
+			children = (
+				1895D4E92848939E00254622 /* ClassClustersTest.h */,
+				1895D4EA2848939E00254622 /* ClassClustersTest.m */,
+			);
+			path = ClassClusters;
+			sourceTree = "<group>";
+		};
+		1895D4F128489D0700254622 /* SafeObj */ = {
+			isa = PBXGroup;
+			children = (
+				1895D4F228489D2000254622 /* SafeObjTest.h */,
+				1895D4F328489D2000254622 /* SafeObjTest.m */,
+				1895D4F528489D4900254622 /* NSArray+WBBSafe.h */,
+				1895D4F628489D4900254622 /* NSArray+WBBSafe.m */,
+			);
+			path = SafeObj;
 			sourceTree = "<group>";
 		};
 		403EBFC6225254D1003E2309 /* Category */ = {
@@ -1491,12 +1546,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1895D4E5284892DA00254622 /* MoneyObj.m in Sources */,
+				1895D4EB2848939E00254622 /* ClassClustersTest.m in Sources */,
+				1895D4E6284892DA00254622 /* MethodSwizzlingDemo.m in Sources */,
 				1895D49B282D48BC00254622 /* main.m in Sources */,
-				1895D4D8284852AE00254622 /* MethodSwizzlingDemo.m in Sources */,
-				1895D4A1282D48D600254622 /* MoneyObj.m in Sources */,
-				1895D4D52848528800254622 /* NSObject+swizzling.m in Sources */,
 				1895D4BF2835E1A000254622 /* PrePersonModel.m in Sources */,
-				1895D4BC2835DF6500254622 /* NSPredicateDemo.m in Sources */,
+				1895D4E4284892DA00254622 /* NSPredicateDemo.m in Sources */,
+				1895D4F428489D2000254622 /* SafeObjTest.m in Sources */,
+				1895D4E7284892DA00254622 /* NSObject+swizzling.m in Sources */,
+				1895D4F728489D4900254622 /* NSArray+WBBSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

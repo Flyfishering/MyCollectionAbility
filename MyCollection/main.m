@@ -10,13 +10,15 @@
 #import "MoneyObj.h"
 #import "NSPredicateDemo.h"
 #import "MethodSwizzlingDemo.h"
+#import "SafeObjTest.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
 //        [[MoneyObj new] test];
 //        [[NSPredicateDemo new] test];
-    [[MethodSwizzlingDemo new] test];
+//    [[MethodSwizzlingDemo new] test];
+        [[SafeObjTest new] test];
         NSLog(@"Hello, World!");
     }
     return 0;
