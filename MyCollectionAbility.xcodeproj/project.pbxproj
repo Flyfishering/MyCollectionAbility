@@ -86,6 +86,12 @@
 		1895D4EB2848939E00254622 /* ClassClustersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4EA2848939E00254622 /* ClassClustersTest.m */; };
 		1895D4F428489D2000254622 /* SafeObjTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4F328489D2000254622 /* SafeObjTest.m */; };
 		1895D4F728489D4900254622 /* NSArray+WBBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D4F628489D4900254622 /* NSArray+WBBSafe.m */; };
+		18DC418C284F5C760046656D /* NSObject+WBBSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC418B284F5C760046656D /* NSObject+WBBSwizzling.m */; };
+		18EA585729068F8100E8270A /* NSTimer+BlocksSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA584F29068F8100E8270A /* NSTimer+BlocksSupport.m */; };
+		18EA585829068F8100E8270A /* TimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA585029068F8100E8270A /* TimeTest.m */; };
+		18EA585929068F8100E8270A /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA585229068F8100E8270A /* YYWeakProxy.m */; };
+		18EA585A29068F8100E8270A /* TimeTest_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA585529068F8100E8270A /* TimeTest_1.m */; };
+		18F70F52289B7496006F7B43 /* NSTimerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F70F51289B7496006F7B43 /* NSTimerDemo.m */; };
 		403EBFC92252550A003E2309 /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 403EBFC82252550A003E2309 /* UIButton+EnlargeTouchArea.m */; };
 		404EF97E22B53B5D004F4784 /* LayoutSubviewDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404EF97D22B53B5D004F4784 /* LayoutSubviewDemoVC.swift */; };
 		406A5852204EE11400D5EA5C /* SingleInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 406A5851204EE11400D5EA5C /* SingleInstance.m */; };
@@ -306,6 +312,18 @@
 		1895D4F328489D2000254622 /* SafeObjTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeObjTest.m; sourceTree = "<group>"; };
 		1895D4F528489D4900254622 /* NSArray+WBBSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+WBBSafe.h"; sourceTree = "<group>"; };
 		1895D4F628489D4900254622 /* NSArray+WBBSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WBBSafe.m"; sourceTree = "<group>"; };
+		18DC418A284F5C760046656D /* NSObject+WBBSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WBBSwizzling.h"; sourceTree = "<group>"; };
+		18DC418B284F5C760046656D /* NSObject+WBBSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WBBSwizzling.m"; sourceTree = "<group>"; };
+		18EA584D29068F8100E8270A /* NSTimer+BlocksSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+BlocksSupport.h"; sourceTree = "<group>"; };
+		18EA584E29068F8100E8270A /* TimeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTest.h; sourceTree = "<group>"; };
+		18EA584F29068F8100E8270A /* NSTimer+BlocksSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+BlocksSupport.m"; sourceTree = "<group>"; };
+		18EA585029068F8100E8270A /* TimeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTest.m; sourceTree = "<group>"; };
+		18EA585229068F8100E8270A /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		18EA585329068F8100E8270A /* TimeTest_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTest_1.h; sourceTree = "<group>"; };
+		18EA585429068F8100E8270A /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		18EA585529068F8100E8270A /* TimeTest_1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTest_1.m; sourceTree = "<group>"; };
+		18F70F50289B7495006F7B43 /* NSTimerDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTimerDemo.h; sourceTree = "<group>"; };
+		18F70F51289B7496006F7B43 /* NSTimerDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerDemo.m; sourceTree = "<group>"; };
 		1D431651E4932E932FB81ACA /* libPods-MyCollectionAbility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCollectionAbility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4019A7E022B91B5E0077E673 /* LayoutSubviewsDemo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LayoutSubviewsDemo.md; sourceTree = "<group>"; };
 		403EBFC72252550A003E2309 /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
@@ -1020,6 +1038,7 @@
 				1895D49A282D48BC00254622 /* main.m */,
 				1895D4BD2835E1A000254622 /* PrePersonModel.h */,
 				1895D4BE2835E1A000254622 /* PrePersonModel.m */,
+				18F70F4F289B7482006F7B43 /* NSTimer */,
 				1895D4F128489D0700254622 /* SafeObj */,
 				1895D4E82848938B00254622 /* ClassClusters */,
 				1895D4DF284892DA00254622 /* MethodSwizzling */,
@@ -1074,8 +1093,51 @@
 				1895D4F328489D2000254622 /* SafeObjTest.m */,
 				1895D4F528489D4900254622 /* NSArray+WBBSafe.h */,
 				1895D4F628489D4900254622 /* NSArray+WBBSafe.m */,
+				18DC418A284F5C760046656D /* NSObject+WBBSwizzling.h */,
+				18DC418B284F5C760046656D /* NSObject+WBBSwizzling.m */,
 			);
 			path = SafeObj;
+			sourceTree = "<group>";
+		};
+		18EA584C29068F8100E8270A /* Time_1 */ = {
+			isa = PBXGroup;
+			children = (
+				18EA584D29068F8100E8270A /* NSTimer+BlocksSupport.h */,
+				18EA584E29068F8100E8270A /* TimeTest.h */,
+				18EA584F29068F8100E8270A /* NSTimer+BlocksSupport.m */,
+				18EA585029068F8100E8270A /* TimeTest.m */,
+			);
+			path = Time_1;
+			sourceTree = "<group>";
+		};
+		18EA585129068F8100E8270A /* Time_2 */ = {
+			isa = PBXGroup;
+			children = (
+				18EA585429068F8100E8270A /* YYWeakProxy.h */,
+				18EA585229068F8100E8270A /* YYWeakProxy.m */,
+				18EA585329068F8100E8270A /* TimeTest_1.h */,
+				18EA585529068F8100E8270A /* TimeTest_1.m */,
+			);
+			path = Time_2;
+			sourceTree = "<group>";
+		};
+		18EA585629068F8100E8270A /* Time_0 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Time_0;
+			sourceTree = "<group>";
+		};
+		18F70F4F289B7482006F7B43 /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				18EA585629068F8100E8270A /* Time_0 */,
+				18EA584C29068F8100E8270A /* Time_1 */,
+				18EA585129068F8100E8270A /* Time_2 */,
+				18F70F50289B7495006F7B43 /* NSTimerDemo.h */,
+				18F70F51289B7496006F7B43 /* NSTimerDemo.m */,
+			);
+			path = NSTimer;
 			sourceTree = "<group>";
 		};
 		403EBFC6225254D1003E2309 /* Category */ = {
@@ -1548,13 +1610,19 @@
 			files = (
 				1895D4E5284892DA00254622 /* MoneyObj.m in Sources */,
 				1895D4EB2848939E00254622 /* ClassClustersTest.m in Sources */,
+				18EA585729068F8100E8270A /* NSTimer+BlocksSupport.m in Sources */,
 				1895D4E6284892DA00254622 /* MethodSwizzlingDemo.m in Sources */,
 				1895D49B282D48BC00254622 /* main.m in Sources */,
 				1895D4BF2835E1A000254622 /* PrePersonModel.m in Sources */,
+				18F70F52289B7496006F7B43 /* NSTimerDemo.m in Sources */,
+				18EA585A29068F8100E8270A /* TimeTest_1.m in Sources */,
 				1895D4E4284892DA00254622 /* NSPredicateDemo.m in Sources */,
+				18EA585929068F8100E8270A /* YYWeakProxy.m in Sources */,
 				1895D4F428489D2000254622 /* SafeObjTest.m in Sources */,
+				18DC418C284F5C760046656D /* NSObject+WBBSwizzling.m in Sources */,
 				1895D4E7284892DA00254622 /* NSObject+swizzling.m in Sources */,
 				1895D4F728489D4900254622 /* NSArray+WBBSafe.m in Sources */,
+				18EA585829068F8100E8270A /* TimeTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

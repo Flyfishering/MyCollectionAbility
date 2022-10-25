@@ -1,8 +1,8 @@
 //
-//  NSArray+WBBSafe.h
+//  TimeTest_1.h
 //  MyCollection
 //
-//  Created by Apple on 2022/6/2.
+//  Created by Apple on 2022/10/24.
 //  Copyright © 2022 mac. All rights reserved.
 //
 
@@ -10,16 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-
-
-@interface NSArray (WBBSafe)
-
-
-+ (void)beforInitialize;
-
-+ (void)exchangeSafeMethod;
-
+@interface TimeTest_1 : NSObject
 
 @end
 
