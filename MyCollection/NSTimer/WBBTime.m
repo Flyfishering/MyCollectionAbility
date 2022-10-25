@@ -7,7 +7,39 @@
 //
 
 #import "WBBTime.h"
-#import "NSTimer+BlocksSupport.h"
+
+@interface NSTimer (WBBBlocksSupport)
++ (NSTimer *)xx_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
+                                       repeats:(BOOL)repeats
+                                         block:(void(^)(void))block;
+@end
+
+
+@implementation NSTimer (WBBBlocksSupport)
++ (NSTimer *)xx_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
+                                       repeats:(BOOL)repeats
+                                         block:(void(^)(void))block;
+{
+    NSTimer *time = [self scheduledTimerWithTimeInterval:interval
+                                         target:self
+                                       selector:@selector(xx_blockInvoke:)
+                                       userInfo:[block copy]
+                                        repeats:repeats];
+    [[NSRunLoop currentRunLoop] addTimer:time forMode:NSRunLoopCommonModes];
+    return time;
+}
+
++ (void)xx_blockInvoke:(NSTimer *)timer {
+    void (^block)(void) = timer.userInfo;
+    if(block) {
+        block();
+    }
+}
+
+@end
+
+
+
 
 @interface WBBTime()
 
@@ -22,7 +54,11 @@
 
 - (void)dealloc
 {
-    [self invalidate];
+    // 这里不能用 self.timer weakSelf 在 dealloc 中会奔溃
+    if(_timer.isValid){
+        [_timer invalidate];
+    }
+    _timer = nil;
     NSLog(@"%s_%s",__FILE_NAME__,__FUNCTION__);
 }
 
