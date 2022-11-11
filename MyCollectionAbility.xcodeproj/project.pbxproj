@@ -60,6 +60,7 @@
 		04FAD79B1E6A6DCF00139FDD /* SingelAndBlockSingel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD79A1E6A6DCF00139FDD /* SingelAndBlockSingel.m */; };
 		04FAD79E1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD79D1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m */; };
 		04FAD7A11E6A6F4B00139FDD /* SingelAndBlockSecondObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD7A01E6A6F4B00139FDD /* SingelAndBlockSecondObject.m */; };
+		1813148D291E569B00A71EFA /* NSString+Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813148C291E569B00A71EFA /* NSString+Number.m */; };
 		1816C98925EE205F00CBD587 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C98825EE205F00CBD587 /* OtherViewController.m */; };
 		1816C99225EE20FD00CBD587 /* OtherObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C99125EE20FD00CBD587 /* OtherObj.m */; };
 		1816C99825EE213A00CBD587 /* OtherDelegateObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C99725EE213A00CBD587 /* OtherDelegateObj.m */; };
@@ -259,6 +260,8 @@
 		04FAD79D1E6A6E8B00139FDD /* SingelAndBlockFirstObjct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingelAndBlockFirstObjct.m; sourceTree = "<group>"; };
 		04FAD79F1E6A6F4B00139FDD /* SingelAndBlockSecondObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingelAndBlockSecondObject.h; sourceTree = "<group>"; };
 		04FAD7A01E6A6F4B00139FDD /* SingelAndBlockSecondObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingelAndBlockSecondObject.m; sourceTree = "<group>"; };
+		1813148B291E569B00A71EFA /* NSString+Number.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Number.h"; sourceTree = "<group>"; };
+		1813148C291E569B00A71EFA /* NSString+Number.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Number.m"; sourceTree = "<group>"; };
 		1816C98725EE205F00CBD587 /* OtherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
 		1816C98825EE205F00CBD587 /* OtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
 		1816C99025EE20FD00CBD587 /* OtherObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherObj.h; sourceTree = "<group>"; };
@@ -926,6 +929,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1813148A291E566900A71EFA /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				1813148B291E569B00A71EFA /* NSString+Number.h */,
+				1813148C291E569B00A71EFA /* NSString+Number.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 		1816C98625EE203E00CBD587 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -1039,6 +1051,7 @@
 		1895D499282D48BC00254622 /* MyCollection */ = {
 			isa = PBXGroup;
 			children = (
+				1813148A291E566900A71EFA /* NSString */,
 				1895D49A282D48BC00254622 /* main.m */,
 				1895D4BD2835E1A000254622 /* PrePersonModel.h */,
 				1895D4BE2835E1A000254622 /* PrePersonModel.m */,
@@ -1620,6 +1633,7 @@
 				18EA585729068F8100E8270A /* NSTimer+BlocksSupport.m in Sources */,
 				1895D4E6284892DA00254622 /* MethodSwizzlingDemo.m in Sources */,
 				1895D49B282D48BC00254622 /* main.m in Sources */,
+				1813148D291E569B00A71EFA /* NSString+Number.m in Sources */,
 				1895D4BF2835E1A000254622 /* PrePersonModel.m in Sources */,
 				18F70F52289B7496006F7B43 /* NSTimerDemo.m in Sources */,
 				18EA585A29068F8100E8270A /* TimeTest_1.m in Sources */,
